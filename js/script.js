@@ -398,13 +398,13 @@ function introAnimation() {
       {
         visibility: "hidden",
         background: "rgba(0, 255, 195, 0.3)",
-        textShadow: `0 0 0 ${color.teal2}`,
+        // textShadow: `0 0 0 ${color.teal2}`,
         ease: Sine.easeIn,
       },
       {
         visibility: "visible",
         background: "rgba(0, 255, 195, 0)",
-        textShadow: `0 0 60px ${color.teal2}`,
+        // textShadow: `0 0 60px ${color.teal2}`,
         ease: Sine.easeOut,
       },
       0.03,

@@ -56,7 +56,7 @@ p {
 h2 {
   font-style: normal;
   color: #00ffc3;
-  text-shadow: 0 0 10px #00ffc3;
+  /* text-shadow: 0 0 10px #00ffc3; */
 }
 
 p {
