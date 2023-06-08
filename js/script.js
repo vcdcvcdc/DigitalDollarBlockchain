@@ -394,7 +394,7 @@ function introAnimation() {
 
     .staggerFromTo(
       words,
-      0.5,
+      0.3,
       {
         visibility: "hidden",
         background: "rgba(0, 255, 195, 0.3)",
@@ -407,7 +407,7 @@ function introAnimation() {
         textShadow: `0 0 60px ${color.teal2}`,
         ease: Sine.easeOut,
       },
-      0.05,
+      0.03,
       duration * 0.33
     )
 
@@ -728,7 +728,7 @@ function scrollTo(e) {
 new Vue({
   el: "#app",
   mounted() {
-    window.addEventListener("wheel", scrollTo);
+    // window.addEventListener("wheel", scrollTo);
     introAnimation.call(this);
     spaceWorld(document.getElementById("starfield"));
   },
