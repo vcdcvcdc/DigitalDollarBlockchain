@@ -212,6 +212,21 @@ p {
   #content {
     padding: 0em;
   }
+  .ui-grid {
+   
+    grid-template-columns: 5% 90% 5%;
+  }
+  .jumbotron_card {
+    padding: 2rem 0.4rem !important;
+  }
+
+  .jumbotron {
+    padding: 0.5rem !important;
+  }
+
+  .jumbotron_outline  {
+    padding: 0.5rem !important;
+  }
 }
 
 .title {
