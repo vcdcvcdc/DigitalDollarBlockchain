@@ -12,12 +12,12 @@ const $$ = (sel) => document.querySelectorAll(sel);
 function introAnimation() {
   const duration = 4;
 
-  const { chars } = new SplitText("#header h1 span", {
-    type: "lines, words, chars",
-    linesClass: "line line++",
-    wordsClass: "word word++",
-    charsClass: "char",
-  });
+  // const { chars } = new SplitText("#header h1 span", {
+  //   type: "lines, words, chars",
+  //   linesClass: "line line++",
+  //   wordsClass: "word word++",
+  //   charsClass: "char",
+  // });
 
   let descriptionSplit = new SplitText("#content", {
     type: "lines, words, chars",
@@ -26,6 +26,20 @@ function introAnimation() {
     charsClass: "char",
   });
   const words = descriptionSplit.words; 
+
+  setTimeout(() => {
+    const textAnimation = document.querySelector(".text-stroke");
+    setAnimationName(textAnimation, "none");
+    requestAnimationFrame(() =>
+        setTimeout(() => setAnimationName(textAnimation, ""), 0)
+    );
+  }, 15000);
+
+  const setAnimationName = (element, animationName) => {
+      if (element) {
+          element.style.animationName = animationName;
+      }
+  };
 
 
   const easeOutElastic = Elastic.easeOut.config(1, 1);
@@ -373,24 +387,24 @@ function introAnimation() {
       duration * 0.66
     )
 
-    .staggerFromTo(
-      chars,
-      0.5,
-      {
-        visibility: "hidden",
-        background: "rgba(0, 255, 195, 0.3)",
-        textShadow: `0 0 0 ${color.teal2}`,
-        ease: Sine.easeIn,
-      },
-      {
-        visibility: "visible",
-        background: "rgba(0, 255, 195, 0)",
-        textShadow: `0 0 60px ${color.teal2}`,
-        ease: Sine.easeOut,
-      },
-      0.05,
-      duration * 0.33
-    )
+    // .staggerFromTo(
+    //   chars,
+    //   0.5,
+    //   {
+    //     visibility: "hidden",
+    //     background: "rgba(0, 255, 195, 0.3)",
+    //     textShadow: `0 0 0 ${color.teal2}`,
+    //     ease: Sine.easeIn,
+    //   },
+    //   {
+    //     visibility: "visible",
+    //     background: "rgba(0, 255, 195, 0)",
+    //     textShadow: `0 0 60px ${color.teal2}`,
+    //     ease: Sine.easeOut,
+    //   },
+    //   0.05,
+    //   duration * 0.33
+    // )
 
     .staggerFromTo(
       words,
