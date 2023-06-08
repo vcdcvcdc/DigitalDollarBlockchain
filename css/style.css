@@ -59,6 +59,9 @@ h2 {
   text-shadow: 0 0 10px #00ffc3;
 }
 
+p {
+  font-size: 16px !important;
+}
 
 #header .ui-mini-text {
   grid-row: 3/4;
@@ -826,7 +829,6 @@ p {
 
 .jumbotron_card p {
   line-height: 140%;
-  font-size: 16px;
   margin: 0
 }
 
@@ -843,27 +845,14 @@ p {
 }
 
 h2.bheader {
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: bold;
 }
 
 .jumbotron p,
 .jumbotron_outline p {
   line-height: 140%;
-  font-size: 16px;
 }
-
-@media (max-width: 768px) {
-  .jumbotron p,
-  .jumbotron_outline p {
-    font-size: 15px;
-  }
-
-  .jumbotron_card p {
-    font-size: 15px;
-  }
-}
-
 
 #header h1 em {
   display: block;
