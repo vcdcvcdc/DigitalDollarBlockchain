@@ -740,7 +740,7 @@ function scrollTo(e) {
   document.getElementById("content").scrollBy({
     top: e.deltaY, // Scroll up or down by 30 pixels
     left: 0,
-    behavior: "smooth" // Optional smooth scrolling
+    // behavior: "smooth" // Optional smooth scrolling
   });
 }
 
