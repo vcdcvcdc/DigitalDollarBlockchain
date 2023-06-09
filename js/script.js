@@ -731,18 +731,24 @@ function spaceWorld(targetElement) {
 //   }
 // }
 
-scrollAmount = 0
+// scrollAmount = 0
 
 function scrollTo(e) {
-  scrollAmount += e.deltaY
-  document.getElementById("content").scrollTo(0, scrollAmount);
-
+  // scrollAmount += e.deltaY
+  // document.getElementById("content").scrollTo(0, scrollAmount);
+  e.preventDefault(); // Prevent default scrolling behavior
+  document.getElementById("content").scrollBy({
+    top: e.deltaY, // Scroll up or down by 30 pixels
+    left: 0,
+    behavior: "smooth" // Optional smooth scrolling
+  });
 }
+
 
 new Vue({
   el: "#app",
   mounted() {
-    // window.addEventListener("wheel", scrollTo);
+    window.addEventListener("wheel", scrollTo);
     introAnimation.call(this);
     spaceWorld(document.getElementById("starfield"));
   },
