@@ -990,7 +990,8 @@ body {
 }
 
 .text-stroke {
-  font-size: 92px;
+  font-size: 4rem;
+  text-align: center;
   letter-spacing: 4px;
   fill: none;
   stroke: #00ffc3;
