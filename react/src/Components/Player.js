@@ -13,8 +13,9 @@ import * as THREE from "three";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { RoughEase } from "gsap/EasePack";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Elastic, TweenMax, TimelineMax, Power4, Sine } from "gsap/gsap-core";
-gsap.registerPlugin(SplitText)
+gsap.registerPlugin(SplitText, ScrollTrigger);
 
 const $ = (sel) => document.querySelector(sel);
 const $$ = (sel) => document.querySelectorAll(sel);
@@ -119,7 +120,6 @@ class Player extends Component {
         this.playMelody = this.playMelody.bind(this);
         this.generateProgression = this.generateProgression.bind(this);
         this.toggle = this.toggle.bind(this);
-
     }
 
     componentDidMount() {
@@ -153,9 +153,6 @@ class Player extends Component {
             if (this.state.contextStarted) {
                 this.generateProgression()
                 this.setState({ ...this.state, progress: 0 });
-                if (Tone.Transport.state === "started") {
-                    this.stop();
-                }
                 if (Tone.Transport.state !== "started") {
                     this.start();
                 }
@@ -174,14 +171,76 @@ class Player extends Component {
 
     introAnimation = () => {
         const duration = 4;
+        // gsap.utils.toArray(".text-box").forEach(function (elem) {
+        //     ScrollTrigger.create({
+        //         trigger: elem,
+        //         start: "top 55%",
+        //         end: "bottom 50%",
+        //         markers: true,
+        //         onEnter: function () {
+        //             console.log('here1')
+        //             gsap.fromTo(
+        //                 elem,
+        //                 { y: 100, autoAlpha: 0 },
+        //                 {
+        //                     duration: 1.25,
+        //                     y: 0,
+        //                     autoAlpha: 1,
+        //                     ease: "back",
+        //                     overwrite: "auto"
+        //                 }
+        //             );
+        //         },
+        //         onLeave: function () {
+        //             console.log('here2')
 
-        let descriptionSplit = new SplitText('#description', {
-            type: "lines, words, chars",
-            linesClass: "line line++",
-            wordsClass: "word word++",
-            charsClass: "char",
-        });
-        const words = descriptionSplit.words;
+        //             gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
+        //         },
+        //         onEnterBack: function () {
+        //             console.log('here3')
+
+        //             gsap.fromTo(
+        //                 elem,
+        //                 { y: -100, autoAlpha: 0 },
+        //                 {
+        //                     duration: 1.25,
+        //                     y: 0,
+        //                     autoAlpha: 1,
+        //                     ease: "back",
+        //                     overwrite: "auto"
+        //                 }
+        //             );
+        //         },
+        //         onLeaveBack: function () {
+        //             console.log('here4')
+        //             gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
+        //         }
+        //     });
+        // });
+        // let descriptionSplit = new SplitText('#description', {
+        //     type: "lines, words, chars",
+        //     linesClass: "line line++",
+        //     wordsClass: "word word++",
+        //     charsClass: "char",
+        // });
+        // const words = descriptionSplit.words;
+
+        // let descriptionSplit = new SplitText('h2', {
+        //     type: "lines, words, chars",
+        //     linesClass: "line line++",
+        //     wordsClass: "word word++",
+        //     charsClass: "char",
+        // });
+        // const words = descriptionSplit.words;
+
+        // let descriptionSplit1 = new SplitText('h3', {
+        //     type: "lines, words, chars",
+        //     linesClass: "line line++",
+        //     wordsClass: "word word++",
+        //     charsClass: "char",
+        // });
+        // const words1 = descriptionSplit1.words;
+
         const easeOutElastic = Elastic.easeOut.config(1, 1);
         const section = document.getElementById('header');
         const button = document.getElementById('button');
@@ -524,24 +583,42 @@ class Player extends Component {
             )
 
             // Title
-            .staggerFromTo(
-                words,
-                0.2,
-                {
-                    visibility: "hidden",
-                    background: "rgba(0, 255, 195, 0.3)",
-                    // textShadow: `0 0 0 ${color.teal2}`,
-                    ease: Sine.easeIn,
-                },
-                {
-                    visibility: "visible",
-                    background: "rgba(0, 255, 195, 0)",
-                    // textShadow: `0 0 60px ${color.teal2}`,
-                    ease: Sine.easeOut,
-                },
-                0.03,
-                duration * 0.33
-            )
+            // .staggerFromTo(
+            //     words,
+            //     0.2,
+            //     {
+            //         visibility: "hidden",
+            //         background: "rgba(0, 255, 195, 0.3)",
+            //         // textShadow: `0 0 0 ${color.teal2}`,
+            //         ease: Sine.easeIn,
+            //     },
+            //     {
+            //         visibility: "visible",
+            //         background: "rgba(0, 255, 195, 0)",
+            //         // textShadow: `0 0 60px ${color.teal2}`,
+            //         ease: Sine.easeOut,
+            //     },
+            //     0.03,
+            //     duration * 0.33
+            // )
+            // .staggerFromTo(
+            //     words1,
+            //     0.2,
+            //     {
+            //         visibility: "hidden",
+            //         background: "rgba(0, 255, 195, 0.3)",
+            //         // textShadow: `0 0 0 ${color.teal2}`,
+            //         ease: Sine.easeIn,
+            //     },
+            //     {
+            //         visibility: "visible",
+            //         background: "rgba(0, 255, 195, 0)",
+            //         // textShadow: `0 0 60px ${color.teal2}`,
+            //         ease: Sine.easeOut,
+            //     },
+            //     0.03,
+            //     duration * 0.33
+            // )
             // UI-Text
             .add("textBox", duration * 0.66)
             .staggerFromTo(
@@ -1012,12 +1089,12 @@ class Player extends Component {
                     </div>
                     <section id="header" >
                         <div className="wrap">
-                            {
+                            {/* {
                                 ["t", "b"].map(function (n) {
                                     return (
                                         <div className={"ui-inner-border " + n} key={"UIInnerBorder" + n}>
                                             {
-                                                n === "b" && <button id="button">
+                                                n === "b" && <button id="button" htmlFor="menu-toggle">
                                                     <span className="border"></span>
                                                     <div className="roulette"></div>
                                                 </button>
@@ -1025,7 +1102,10 @@ class Player extends Component {
                                         </div>
                                     )
                                 })
-                            }
+                            } */}
+                            <div className="ui-inner-border t">
+                            </div>
+
                             <div className="ui-grid">
                                 <div className="ui-box">
                                     <div className="text-container">
@@ -1045,11 +1125,19 @@ class Player extends Component {
                                         </svg>
                                     </div>
                                     <div id="description">
-                                        <div className="container">
-                                            <div className="text-box" id="finance">
-                                                <h2>
+                                        <div className="text-box" id="finance">
+                                            <div className='scroll-content'>
+                                                {/* <h2>
                                                     Transforming Finance: Digital Dollar Blockchain
-                                                </h2>
+                                                </h2> */}
+                                                <svg viewBox="0 -20 1320 150">
+                                                    <text x="50%" y="30%" textAnchor="middle">
+                                                        Transforming Finance:
+                                                    </text>
+                                                    <text x="50%" y="80%" textAnchor="middle">
+                                                        Digital Dollar Blockchain
+                                                    </text>
+                                                </svg>
                                                 <p>
                                                     The Digital Dollar Blockchain Corporation (DDBC) is
                                                     rewriting the narrative of financial technology,
@@ -1064,8 +1152,15 @@ class Player extends Component {
                                                     Experience the evolution of finance-- amplified.
                                                 </p>
                                             </div>
-                                            <div className="text-box" id="mission">
-                                                <h2>Our Mission</h2>
+                                        </div>
+                                        <div className="text-box" id="mission">
+                                            <div className='scroll-content'>
+                                                {/* <h2>Our Mission</h2> */}
+                                                <svg viewBox="0 -20 1320 70">
+                                                    <text x="50%" y="50%" textAnchor="middle">
+                                                        Our Mission
+                                                    </text>
+                                                </svg>
                                                 <p>
                                                     Our aspiration is a future where digital currencies
                                                     are standard, and financial operations are as
@@ -1077,8 +1172,18 @@ class Player extends Component {
                                                     universe, interconnected modern necessity.
                                                 </p>
                                             </div>
-                                            <div className="text-box" id="features">
-                                                <h2>Innovative Features of our Blockchain</h2>
+                                        </div>
+                                        <div className="text-box" id="features">
+                                            <div className='scroll-content'>
+                                                {/* <h2>Innovative Features of our Blockchain</h2> */}
+                                                <svg viewBox="0 -20 1320 150">
+                                                    <text x="50%" y="30%" textAnchor="middle">
+                                                        Innovative Features
+                                                    </text>
+                                                    <text x="50%" y="80%" textAnchor="middle">
+                                                        of our Blockchain
+                                                    </text>
+                                                </svg>
                                                 <p>
                                                     The Digital Dollar Blockchain (DDBC) offers an
                                                     entirely he Digital Dollar Blockchain (DDBC)
@@ -1144,8 +1249,16 @@ class Player extends Component {
                                                     complex processes.
                                                 </p>
                                             </div>
-                                            <div className="text-box" id="commitment">
-                                                <h2 className="bheader text-center ">Our Commitment</h2>
+                                        </div>
+                                        <div className="text-box" id="commitment">
+                                            <div className='scroll-content'>
+
+                                                {/* <h2 className="bheader text-center ">Our Commitment</h2> */}
+                                                <svg viewBox="0 -20 1320 70">
+                                                    <text x="50%" y="50%" textAnchor="middle">
+                                                        Our Commitment
+                                                    </text>
+                                                </svg>
                                                 <p>In striving to create a secure and transparent digital currency
                                                     ecosystem, we comply with
                                                     rigorous operational guidelines:</p>
@@ -1171,8 +1284,15 @@ class Player extends Component {
                                                     our connection to cross-channel communication.
                                                 </p>
                                             </div>
-                                            <div className="text-box" id="tokens">
-                                                <h2 className="bheader text-center ">Our Tokens</h2>
+                                        </div>
+                                        <div className="text-box" id="tokens">
+                                            <div className='scroll-content'>
+                                                {/* <h2 className="bheader text-center ">Our Tokens</h2> */}
+                                                <svg viewBox="0 -20 1320 70">
+                                                    <text x="50%" y="50%" textAnchor="middle">
+                                                        Our Tokens
+                                                    </text>
+                                                </svg>
                                                 <h3>Digital Dollar (DD)</h3>
                                                 <p>The DD is a digital asset uniting the stability of the US Dollar with
                                                     the prowess of
@@ -1209,8 +1329,16 @@ class Player extends Component {
 
                                                 </p>
                                             </div>
-                                            <div className="text-box" id="login">
-                                                <h2 className="bheader text-center">Testing DDBC:</h2>
+                                        </div>
+                                        <div className="text-box" id="login">
+                                            <div className='scroll-content'>
+
+                                                {/* <h2 className="bheader text-center">Testing DDBC:</h2> */}
+                                                <svg viewBox="0 -20 1320 70">
+                                                    <text x="50%" y="50%" textAnchor="middle">
+                                                        Testing DDBC:
+                                                    </text>
+                                                </svg>
                                                 <h3>Step 1</h3>
                                                 <p> Establish a Connection with an EVM Wallet:
                                                     Initiate your DDBC testing by connecting with an EVM Wallet using
@@ -1311,23 +1439,27 @@ class Player extends Component {
                                     </div>
                                 </div>
                             </div>
+                            <div className="ui-inner-border b" >
+                                <ul id="menu">
+                                    <li>
+                                        <button id="button">
+                                            <span className="border"></span>
+                                            <div className="roulette"></div>
+                                        </button>
+                                        <ul>
+                                            <li><a href="#finance">Finance</a></li>
+                                            <li><a href="#mission">Mission</a></li>
+                                            <li><a href="#features">Features</a></li>
+                                            <li><a href="#commitment">Commitment</a></li>
+                                            <li><a href="#tokens">Tokens</a></li>
+                                            <li><a href="#login">Login/Register</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
                     </section>
-                    <input type="checkbox" id="menu-toggle" />
-                    <label htmlFor="menu-toggle">
-                        <i id="open" className="material-icons">menu</i>
-                        <i id="close" className="material-icons">arrow_back</i>
-                    </label>
-                    <ul id="menu">
-                        <li><a href="#finance"><i className="material-icons">mode_edit</i>Finance</a></li>
-                        <li><a href="#mission"><i className="material-icons">mode_edit</i>Mission</a></li>
-                        <li><a href="#features"><i className="material-icons">format_color_fill</i>Features</a></li>
-                        <li><a href="#commitment"><i className="material-icons">insert_emoticons</i>Commitment</a></li>
-                        <li><a href="#tokens"><i className="material-icons">insert_comment</i>Tokens</a></li>
-                        <li><a href="#login"><i className="material-icons">insert_comment</i>Login/Register</a></li>
-                    </ul>
                 </div>
-
             </>
         );
     }
