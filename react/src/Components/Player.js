@@ -730,8 +730,8 @@ class Player extends Component {
         let fieldOfView = 75;
         let nearPlane = 1;
         let farPlane = 5000;
-        let mouseX = 0;
-        let mouseY = 0;
+        let mouseX = 100;
+        let mouseY = 100;
 
         const scene = new THREE.Scene({ antialias: true });
         const camera = new THREE.PerspectiveCamera(
@@ -789,7 +789,6 @@ class Player extends Component {
                     (canvas.getContext("webgl") || canvas.getContext("experimental-webgl"))
                 );
             } catch (e) {
-
                 return false;
             }
         }
@@ -1442,7 +1441,10 @@ class Player extends Component {
                             <div className="ui-inner-border b" >
                                 <ul id="menu">
                                     <li>
-                                        <button id="button">
+                                        <button id="button" onClick={() => {
+                                            const menu = document.getElementById('menu');
+                                            menu.classList.toggle('show');
+                                        }}>
                                             <span className="border"></span>
                                             <div className="roulette"></div>
                                         </button>

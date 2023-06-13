@@ -103,13 +103,21 @@ h1 {
   transform: scale(1);
   color: #afe3d7;
   border-radius: 100%;
-  /* position: absolute; */
-
+  position: absolute;
+  bottom: -24px;
+  left: -24px;
   /* Button */
   aspect-ratio: 1;
   background-image: radial-gradient(closest-side, var(--backgroundColor) 44%, var(--rouletteColor) 45% 47%, transparent 48% 61%, var(--rouletteColor) 62% 64%, var(--backgroundColor) 65% 95%, var(--rouletteColor) 96% 97%, var(--backgroundColor) 100%), repeating-conic-gradient(red 0deg 7deg, var(--rouletteColor) 8deg 9deg, black 10deg 17deg, var(--rouletteColor) 18deg 19deg, red 20deg);
   -webkit-animation: roulette 8s infinite linear;
   animation: roulette 8s infinite linear;
+}
+
+#header button:hover {
+  width: 70px;
+  height: 70px;
+  bottom: -35px;
+  left: -35px;
 }
 
 /* 
@@ -205,10 +213,9 @@ h1 {
 }
 
 .ui-grid .ui-box #description .text-box {
-  border: 1px solid rgba(75, 203, 198, 0.2);
+  /* border: 1px solid rgba(75, 203, 198, 0.2); */
   padding: 5px;
   margin: 0.5rem 0;
-
   /* opacity: 0; */
   /* visibility: hidden; */
 }
@@ -516,9 +523,9 @@ section .col-narrow {
 
 .ui-border-v2.t .batt {
   width: 12px;
-  height: 3px;
+  height: 4px;
   position: relative;
-  margin-top: -6px;
+  margin-top: -7px;
   left: 50%;
   bottom: -1px;
   transform: translate(-50%, 0);
@@ -876,6 +883,9 @@ section .col-narrow {
   animation: rouletteCenter 1s infinite linear;
 }
 
+#header button:hover::before {}
+
+
 @-webkit-keyframes rouletteCenter {
   from {
     transform: translate(-50%, -50%) rotate(0deg);
@@ -910,6 +920,10 @@ section .col-narrow {
   animation: rouletteBall 2s infinite linear;
 }
 
+#header button:hover::after {
+  display: none;
+}
+
 @-webkit-keyframes rouletteBall {
   from {
     transform: translate(-50%, -50%) rotate(0deg) translateY(0%);
@@ -941,7 +955,7 @@ section .col-narrow {
 
 .text-container svg {
   display: block;
-  font: normal 6.875em/1.25 'TTSquaresCondensed-Thin';
+  font: normal 6em/1.25 'TTSquaresCondensed-Thin';
   /* font: normal 10.5em 'TTSquaresCondensed-Thin'; */
   width: 100%;
   margin: 0 auto;
@@ -988,10 +1002,22 @@ section .col-narrow {
   }
 }
 
+
+@media only screen and (max-width: 850px) {
+  .text-container svg {
+    font: normal 4em/1.25 'TTSquaresCondensed-Thin';
+    height: 80px;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   .text-container svg {
     font: normal 2.7em/1.25 'TTSquaresCondensed-Thin';
     height: 80px;
+  }
+
+  #header .ui-inner-border.t {
+    top: 4vh;
   }
 
   .text-copy {
@@ -1016,7 +1042,7 @@ section .col-narrow {
 
   .ui-grid {
     grid-template-columns: 1% 98% 1%;
-    grid-template-rows: 15% 70% 15%;
+    grid-template-rows: 10% 80% 10%;
   }
 
   .ui-c-border {
@@ -1027,7 +1053,11 @@ section .col-narrow {
     display: none;
   }
 
-  .ui-circles {
+  /* .ui-circles {
+    display: none;
+  } */
+
+  .ui-grid .ui-inner-border {
     display: none;
   }
 
@@ -1090,9 +1120,10 @@ section .col-narrow {
 }
 
 #menu li ul {
+
   position: absolute;
-  top: -220px;
-  left: -50%;
+  top: -350px;
+  left: -100px;
   z-index: 999;
   width: 200px;
   padding: 0;
@@ -1105,7 +1136,7 @@ section .col-narrow {
   transform-origin: 50% 0%;
 }
 
-#menu li:hover ul {
+#menu.show li ul {
   border-radius: 3px;
   padding: 15px 0;
   background: #0f0026;
@@ -1169,6 +1200,7 @@ section .col-narrow {
   border-top: dotted 1px transparent;
   border-bottom: dotted 1px transparent;
   transition: all .15s linear;
+  text-align: center;
 }
 
 #menu li li a:hover {
@@ -1189,7 +1221,7 @@ section .col-narrow {
 
 .text-box svg text {
   text-transform: uppercase;
-  animation: stroke 5s  alternate;
+  animation: stroke 5s alternate;
   /* animation: stroke 5s infinite alternate; */
   stroke-width: 2;
   stroke: #00ffc3;
