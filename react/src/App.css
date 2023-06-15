@@ -1257,3 +1257,18 @@ section .col-narrow {
     stroke-width: 0;
   }
 }
+
+
+
+
+
+/* custom css */
+
+.ui-grid .ui-box #description {
+  padding-top: 80px;
+}
+
+.text-container {
+  position: absolute;
+  top: 0;
+}
