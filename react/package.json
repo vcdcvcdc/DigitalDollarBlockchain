@@ -13,7 +13,8 @@
     "react-scripts": "^5.0.1",
     "three": "0.121.0",
     "tone": "^14.7.30",
-    "use-wake-lock": "^1.1.0"
+    "use-wake-lock": "^1.1.0",
+    "wealth-wallet-sdk": "^0.1.5-dev.4"
   },
   "scripts": {
     "start": "react-scripts start",
