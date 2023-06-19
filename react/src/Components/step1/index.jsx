@@ -1,4 +1,5 @@
 import React from 'react';
+import WealthWalletSDK from '../WealthWallet';
 
 const Step1 = () => {
     return (

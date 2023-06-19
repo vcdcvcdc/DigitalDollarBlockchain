@@ -1272,3 +1272,19 @@ section .col-narrow {
   // position: absolute;
   top: 0;
 }
+
+.pointer {
+  cursor: pointer;
+}
+
+input{
+  margin-top: 15px;
+  margin-bottom: 15px;
+  border: 1px solid #00ffc3;
+  outline: none;
+  background: transparent;
+  color: white;
+  font-weight: 600;
+  padding: 10px;
+  width: 80%;
+}
