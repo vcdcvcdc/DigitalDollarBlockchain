@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useWakeLock } from "use-wake-lock";
-import "./App.css";
+import "./dist/App.css";
 import Player from "./Components/Player";
 import WWDetailsContext from "./contexts/wwDetailsContext";
 

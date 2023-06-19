@@ -16,6 +16,7 @@ import { RoughEase } from "gsap/EasePack";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Elastic, TweenMax, TimelineMax, Power4, Sine } from "gsap/gsap-core";
 import WealthWalletSDK from "./WealthWallet";
+import Step3 from "./step3";
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
 const $ = (sel) => document.querySelector(sel);
@@ -1425,18 +1426,9 @@ class Player extends Component {
                           </a>
                           , link your wallet, and pause for 60 seconds.
                         </p>
-                        <h3>Step 3</h3>
-                        <p>
-                          KYC Part 1 (Automated Upon Launch): For testing
-                          purposes, apply the following command:
-                          <br />
-                          curl -X POST
-                          "https://backend.ddbc.dev/api/v1/account/add/address"
-                          <br />
-                          Note: Substitute &#123;address&#125; with your wallet
-                          address. If you prefer to avoid the command line, you
-                          can use https://reqbin.com/curl.
-                        </p>
+
+                        <Step3/>
+                        
                         <h3>Step 4</h3>
                         <p>
                           KYC Part 2: Visit{" "}
