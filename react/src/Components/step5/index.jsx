@@ -1,23 +1,18 @@
 import React from 'react';
 
-const Step3 = () => {
+const Step5 = () => {
     return (
         <div>
-            <h3>Step 3</h3>
+            <h3>Step 5</h3>
             <p>
-                KYC Part 1 (Automated Upon Launch): For testing
-                purposes, apply the following command:
-                <br />
-                curl -X POST
-                "https://backend.ddbc.dev/api/v1/account/add/address"
-                <br />
-                Note: Substitute &#123;address&#125; with your wallet
-                address. If you prefer to avoid the command line, you
-                can use https://reqbin.com/curl.
+                Now you are ready to transact with Karma. Every
+                transaction rewards both the sender and receiver with
+                more Karma, ensuring you always have sufficient Karma
+                to finalize a transaction.
             </p>
         </div>
     );
 }
 
-export default Step3;
+export default Step5;
 

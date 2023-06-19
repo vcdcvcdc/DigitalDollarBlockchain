@@ -17,6 +17,11 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Elastic, TweenMax, TimelineMax, Power4, Sine } from "gsap/gsap-core";
 import WealthWalletSDK from "./WealthWallet";
 import Step3 from "./step3";
+import Step4 from "./step4";
+import Step5 from "./step5";
+import Step6 from "./step6";
+import Step2 from "./step2";
+import Step1 from "./step1";
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
 const $ = (sel) => document.querySelector(sel);
@@ -1379,81 +1384,12 @@ class Player extends Component {
                             Testing DDBC:
                           </text>
                         </svg>
-                        <h3>Step 1</h3>
-                        <p>
-                          {" "}
-                          Establish a Connection with an EVM Wallet: Initiate
-                          your DDBC testing by connecting with an EVM Wallet
-                          using the details below:
-                        </p>
-                        <p>
-                          EVM RPC:{" "}
-                          <a href="https://ddbc.dev ">https://ddbc.dev </a>
-                          <br />
-                          ChainID: 7777
-                          <br />
-                          Token: Karma
-                          <br />
-                          EVM Explorer:{" "}
-                          <a href="https://evm.explorer.ddbc.dev">
-                            https://evm.explorer.ddbc.dev
-                          </a>
-                          <br />
-                          Establish a Connection with a Cosmos Wallet:
-                          <br />
-                          To connect with a Cosmos Wallet, use the information
-                          provided below:
-                          <br />
-                          <WealthWalletSDK />
-                        </p>
-                        <p>
-                          COSMOS RPC:{" "}
-                          <a href="http://3.137.200.25:26657 ">
-                            http://3.137.200.25:26657
-                          </a>{" "}
-                          (visit this link, and it will auto-load in Keplr with
-                          a connected wallet) <br />
-                          Cosmos Explorer:
-                          <a href="https://ibc.explorer.ddbc.dev">
-                            https://ibc.explorer.ddbc.dev
-                          </a>
-                        </p>
-                        <h3>Step 2</h3>
-                        <p>
-                          Navigate to{" "}
-                          <a href="https://frontend.ddbc.dev/login">
-                            https://frontend.ddbc.dev/login
-                          </a>
-                          , link your wallet, and pause for 60 seconds.
-                        </p>
-
+                        <Step1/>
+                        <Step2/>
                         <Step3/>
-                        
-                        <h3>Step 4</h3>
-                        <p>
-                          KYC Part 2: Visit{" "}
-                          <a href="http://kyc.ddbc.dev ">http://kyc.ddbc.dev</a>{" "}
-                          and complete the KYC process. <br />
-                          Upon completion, you will be rewarded with additional
-                          Karma. Ensure your web3 wallet is linked to the
-                          network, refresh the page, and it will sign in with
-                          MetaMas
-                        </p>
-                        <h3>Step 5</h3>
-                        <p>
-                          Now you are ready to transact with Karma. Every
-                          transaction rewards both the sender and receiver with
-                          more Karma, ensuring you always have sufficient Karma
-                          to finalize a transaction.
-                        </p>
-                        <h3>Step 6</h3>
-                        <p>
-                          Initiate a contract. However, remember that it will
-                          not allow transactions until you execute the following
-                          command: <br />
-                          curl -X POST
-                          "https://backend.ddbc.dev/api/v1/account/add/&#123;contract&#125;"
-                        </p>
+                        <Step4/>
+                        <Step5/>
+                        <Step6/>
                       </div>
                     </div>
                   </div>

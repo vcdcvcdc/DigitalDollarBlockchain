@@ -1,23 +1,21 @@
 import React from 'react';
 
-const Step3 = () => {
+const Step4 = () => {
     return (
         <div>
-            <h3>Step 3</h3>
+            <h3>Step 4</h3>
             <p>
-                KYC Part 1 (Automated Upon Launch): For testing
-                purposes, apply the following command:
-                <br />
-                curl -X POST
-                "https://backend.ddbc.dev/api/v1/account/add/address"
-                <br />
-                Note: Substitute &#123;address&#125; with your wallet
-                address. If you prefer to avoid the command line, you
-                can use https://reqbin.com/curl.
+                KYC Part 2: Visit{" "}
+                <a href="http://kyc.ddbc.dev ">http://kyc.ddbc.dev</a>{" "}
+                and complete the KYC process. <br />
+                Upon completion, you will be rewarded with additional
+                Karma. Ensure your web3 wallet is linked to the
+                network, refresh the page, and it will sign in with
+                MetaMas
             </p>
         </div>
     );
 }
 
-export default Step3;
+export default Step4;
 
