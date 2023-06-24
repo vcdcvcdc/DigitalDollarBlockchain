@@ -1,13 +1,19 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import axios from "axios";
 import WWDetailsContext from "../../contexts/wwDetailsContext";
 
 const Step2 = () => {
   const [address, setAddress] = useState("");
   const { wwDetails } = useContext(WWDetailsContext);
-  function addAccountKyc() {
-    const url =
-      "https://backend.ddbc.dev/api/v1/account/add/" + wwDetails?.userAddress;
+
+  useEffect(() => {
+    if (wwDetails?.userAddress) {
+      addAccountKyc(wwDetails?.userAddress);
+    }
+  }, [wwDetails?.userAddress]);
+
+  function addAccountKyc(address) {
+    const url = `https://backend.ddbc.dev/api/v1/account/add/${address}`;
 
     axios
       .post(url)
@@ -62,6 +68,7 @@ const Step2 = () => {
       .post(url, data)
       .then((response) => {
         console.log("accept account", response);
+        alert("Congratulations! You have been whitelisted!");
         // Handle the response here
       })
       .catch((error) => {
