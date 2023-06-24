@@ -8,7 +8,7 @@ const Step2 = () => {
 
   useEffect(() => {
     if (wwDetails?.userAddress) {
-      addAccountKyc(wwDetails?.userAddress);
+    //   addAccountKyc(wwDetails?.userAddress);
     }
   }, [wwDetails?.userAddress]);
 
@@ -79,24 +79,7 @@ const Step2 = () => {
 
   return (
     <div>
-      <h3>Step 2</h3>
-      <p>
-        KYC Part 1 (Automated Upon Launch): For testing purposes, Paste your
-        address here and click submit:
-        <input
-          type="text"
-          placeholder="Enter your wallet address"
-          value={address}
-          onChange={(e) => setAddress(e.target.value)}
-        />
-        <div
-          className="pointer py-3"
-          onClick={addAccountKyc}
-          style={{ color: "#00ffc3" }}
-        >
-          Submit
-        </div>
-      </p>
+   
     </div>
   );
 };
