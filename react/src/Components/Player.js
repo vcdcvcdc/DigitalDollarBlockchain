@@ -1384,7 +1384,7 @@ class Player extends Component {
                             Testing DDBC:
                           </text>
                         </svg>
-                        {/* <Step1 /> */}
+                        <Step1 />
                         {/* <Step2/> */}
                         <Step3 />
                         {/* <Step4 /> */}
