@@ -1,14 +1,5 @@
 import React, { Component } from "react";
 import * as Tone from "tone";
-import ChordProgression from "../Chords/ChordProgression";
-import Piano from "../Piano/Piano";
-import Kick from "../Drums/Kick";
-import Snare from "../Drums/Snare";
-import Hat from "../Drums/Hat";
-import Noise from "../Drums/Noise";
-import Keys from "../Chords/Keys";
-import { fiveToFive } from "../Chords/MajorScale";
-import intervalWeights from "../Chords/IntervalWeights";
 import * as THREE from "three";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
@@ -26,17 +17,7 @@ gsap.registerPlugin(SplitText, ScrollTrigger);
 
 const $ = (sel) => document.querySelector(sel);
 const $$ = (sel) => document.querySelectorAll(sel);
-const cmp = new Tone.Compressor({
-  threshold: -6,
-  ratio: 3,
-  attack: 0.5,
-  release: 0.1,
-});
-const lpf = new Tone.Filter(2000, "lowpass");
-const vol = new Tone.Volume(10);
-Tone.Master.chain(cmp, lpf, vol);
-Tone.Transport.bpm.value = 156;
-Tone.Transport.swing = 1;
+
 const color = {
   teal2: "#00ffc3",
   teal: "#59b29e",
@@ -62,110 +43,19 @@ class Player extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      key: "C",
       progression: [],
       scale: [],
       progress: 0,
 
-      pianoLoaded: false,
-      kickLoaded: false,
-      snareLoaded: false,
-      hatLoaded: false,
-
       contextStarted: false,
-      genChordsOnce: false,
-
-      kickOff: false,
-      snareOff: false,
-      hatOff: false,
-      melodyDensity: 0.33,
-      melodyOff: false,
 
       scalePos: 0,
     };
-    this.noise = Noise;
-    this.chords = new Tone.Sequence(
-      (time, note) => {
-        this.playChord();
-      },
-      [""],
-      "1n"
-    );
-    this.melody = new Tone.Sequence(
-      (time, note) => {
-        this.playMelody();
-      },
-      [""],
-      "8n"
-    );
-    this.kickLoop = new Tone.Sequence(
-      (time, note) => {
-        if (!this.state.kickOff) {
-          if (note === "C4" && Math.random() < 0.9) {
-            this.kick.triggerAttack(note);
-          } else if (note === "." && Math.random() < 0.1) {
-            this.kick.triggerAttack("C4");
-          }
-        }
-      },
-      ["C4", "", "", "", "", "", "", "C4", "C4", "", ".", "", "", "", "", ""],
-      "8n"
-    );
 
-    this.snareLoop = new Tone.Sequence(
-      (time, note) => {
-        if (!this.state.snareOff) {
-          if (note !== "" && Math.random() < 0.8) {
-            this.snare.triggerAttack(note);
-          }
-        }
-      },
-      ["", "C4"],
-      "2n"
-    );
-
-    this.hatLoop = new Tone.Sequence(
-      (time, note) => {
-        if (!this.state.hatOff) {
-          if (note !== "" && Math.random() < 0.8) {
-            this.hat.triggerAttack(note);
-          }
-        }
-      },
-      ["C4", "C4", "C4", "C4", "C4", "C4", "C4", "C4"],
-      "4n"
-    );
-
-    this.chords.humanize = true;
-    this.melody.humanize = true;
-    this.kickLoop.humanize = true;
-    this.snareLoop.humanize = true;
-    this.hatLoop.humanize = true;
-
-    this.nextChord = this.nextChord.bind(this);
-    this.playChord = this.playChord.bind(this);
-    this.playMelody = this.playMelody.bind(this);
-    this.generateProgression = this.generateProgression.bind(this);
-    this.toggle = this.toggle.bind(this);
   }
 
   componentDidMount() {
-    this.pn = new Piano(() =>
-      this.setState({ ...this.state, pianoLoaded: true })
-    ).sampler;
-    this.kick = new Kick(() =>
-      this.setState({ ...this.state, kickLoaded: true })
-    ).sampler;
-    this.snare = new Snare(() =>
-      this.setState({ ...this.state, snareLoaded: true })
-    ).sampler;
-    this.hat = new Hat(() =>
-      this.setState({ ...this.state, hatLoaded: true })
-    ).sampler;
     window.addEventListener("wheel", this.scrollTo);
-    document
-      .getElementById("description")
-      .addEventListener("scrollend", this.manageSong);
     this.spaceWorld(document.getElementById("starfield"));
     this.introAnimation();
   }
@@ -176,34 +66,6 @@ class Player extends Component {
     }
   }
 
-  manageSong = () => {
-    if (
-      this.state.pianoLoaded &&
-      this.state.kickLoaded &&
-      this.state.snareLoaded &&
-      this.state.hatLoaded
-    ) {
-      if (!this.state.contextStarted) {
-        Tone.start();
-        this.setState({ ...this.state, contextStarted: true });
-      }
-    } else {
-      return;
-    }
-
-    try {
-      if (this.state.contextStarted) {
-        this.generateProgression();
-        this.setState({ ...this.state, progress: 0 });
-        if (Tone.Transport.state !== "started") {
-          this.start();
-        }
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  };
-
   scrollTo = (e) => {
     document.getElementById("description").scrollBy({
       top: e.deltaY,
@@ -213,76 +75,6 @@ class Player extends Component {
 
   introAnimation = () => {
     const duration = 4;
-    // gsap.utils.toArray(".text-box").forEach(function (elem) {
-    //     ScrollTrigger.create({
-    //         trigger: elem,
-    //         start: "top 55%",
-    //         end: "bottom 50%",
-    //         markers: true,
-    //         onEnter: function () {
-    //             console.log('here1')
-    //             gsap.fromTo(
-    //                 elem,
-    //                 { y: 100, autoAlpha: 0 },
-    //                 {
-    //                     duration: 1.25,
-    //                     y: 0,
-    //                     autoAlpha: 1,
-    //                     ease: "back",
-    //                     overwrite: "auto"
-    //                 }
-    //             );
-    //         },
-    //         onLeave: function () {
-    //             console.log('here2')
-
-    //             gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
-    //         },
-    //         onEnterBack: function () {
-    //             console.log('here3')
-
-    //             gsap.fromTo(
-    //                 elem,
-    //                 { y: -100, autoAlpha: 0 },
-    //                 {
-    //                     duration: 1.25,
-    //                     y: 0,
-    //                     autoAlpha: 1,
-    //                     ease: "back",
-    //                     overwrite: "auto"
-    //                 }
-    //             );
-    //         },
-    //         onLeaveBack: function () {
-    //             console.log('here4')
-    //             gsap.fromTo(elem, { autoAlpha: 1 }, { autoAlpha: 0, overwrite: "auto" });
-    //         }
-    //     });
-    // });
-    // let descriptionSplit = new SplitText('#description', {
-    //     type: "lines, words, chars",
-    //     linesClass: "line line++",
-    //     wordsClass: "word word++",
-    //     charsClass: "char",
-    // });
-    // const words = descriptionSplit.words;
-
-    // let descriptionSplit = new SplitText('h2', {
-    //     type: "lines, words, chars",
-    //     linesClass: "line line++",
-    //     wordsClass: "word word++",
-    //     charsClass: "char",
-    // });
-    // const words = descriptionSplit.words;
-
-    // let descriptionSplit1 = new SplitText('h3', {
-    //     type: "lines, words, chars",
-    //     linesClass: "line line++",
-    //     wordsClass: "word word++",
-    //     charsClass: "char",
-    // });
-    // const words1 = descriptionSplit1.words;
-
     const easeOutElastic = Elastic.easeOut.config(1, 1);
     const section = document.getElementById("header");
     const button = document.getElementById("button");
@@ -854,180 +646,25 @@ class Player extends Component {
     }
   };
 
-  nextChord = () => {
-    const nextProgress =
-      this.state.progress === this.state.progression.length - 1
-        ? 0
-        : this.state.progress + 1;
-    const nextKickOff = Math.random() < 0.15;
-    const nextSnareOff = Math.random() < 0.2;
-    const nextHatOff = Math.random() < 0.25;
-    const nextMelodyDensity = Math.random() * 0.3 + 0.2;
-    const nextMelodyOff = Math.random() < 0.25;
+  // generateProgression = () => {
+  //   const scale = fiveToFive;
+  //   const newKey = Keys[Math.floor(Math.random() * Keys.length)];
+  //   const newScale = Tone.Frequency(newKey + "5")
+  //     .harmonize(scale)
+  //     .map((f) => Tone.Frequency(f).toNote());
+  //   const newProgression = ChordProgression.generate(8);
+  //   const newScalePos = Math.floor(Math.random() * scale.length);
 
-    if (this.state.progress === 4) {
-      this.setState({
-        ...this.state,
-        progress: nextProgress,
-        kickOff: nextKickOff,
-        snareOff: nextSnareOff,
-        hatOff: nextHatOff,
-      });
-    } else if (this.state.progress === 0) {
-      this.setState({
-        ...this.state,
-        progress: nextProgress,
-        kickOff: nextKickOff,
-        snareOff: nextSnareOff,
-        hatOff: nextHatOff,
-        melodyDensity: nextMelodyDensity,
-        melodyOff: nextMelodyOff,
-      });
-    } else {
-      this.setState({
-        ...this.state,
-        progress: nextProgress,
-      });
-    }
-  };
-
-  playChord = () => {
-    const chord = this.state.progression[this.state.progress];
-    const root = Tone.Frequency(this.state.key + "3").transpose(
-      chord.semitoneDist
-    );
-    const size = 4;
-    const voicing = chord.generateVoicing(size);
-    const notes = Tone.Frequency(root)
-      .harmonize(voicing)
-      .map((f) => Tone.Frequency(f).toNote());
-    //this.pn.context._context.resume();
-    this.pn.triggerAttackRelease(notes, "1n");
-    this.nextChord();
-  };
-
-  playMelody = () => {
-    // const chord = this.state.progression[this.state.progress];
-    // const root = Tone.Frequency(this.state.key+"5").transpose(chord.semitoneDist);
-    // const scale = chord.generateMode();
-    // const notes = Tone.Frequency(root).harmonize(scale).map(f => Tone.Frequency(f).toNote());
-    // const noteIdx = Math.floor(Math.random()*notes.length);
-    // if(Math.random()<this.state.melodyDensity)
-    //     this.pn.triggerAttack(notes[noteIdx]);
-
-    if (this.state.melodyOff || !(Math.random() < this.state.melodyDensity)) {
-      return;
-    }
-
-    const descendRange = Math.min(this.state.scalePos, 7) + 1;
-    const ascendRange = Math.min(
-      this.state.scale.length - this.state.scalePos,
-      7
-    );
-
-    let descend = descendRange > 1;
-    let ascend = ascendRange > 1;
-
-    if (descend && ascend) {
-      if (Math.random() > 0.5) {
-        ascend = !descend;
-      } else {
-        descend = !ascend;
-      }
-    }
-
-    let weights = descend
-      ? intervalWeights.slice(0, descendRange)
-      : intervalWeights.slice(0, ascendRange);
-
-    const sum = weights.reduce((prev, curr) => prev + curr, 0);
-    weights = weights.map((w) => w / sum);
-    for (let i = 1; i < weights.length; i++) {
-      weights[i] += weights[i - 1];
-    }
-
-    const randomWeight = Math.random();
-    let scaleDist = 0;
-    let found = false;
-    while (!found) {
-      if (randomWeight <= weights[scaleDist]) {
-        found = true;
-      } else {
-        scaleDist++;
-      }
-    }
-
-    const scalePosChange = descend ? -scaleDist : scaleDist;
-    const newScalePos = this.state.scalePos + scalePosChange;
-
-    this.setState({
-      ...this.state,
-      scalePos: newScalePos,
-    });
-
-    this.pn.triggerAttackRelease(this.state.scale[newScalePos], "2n");
-  };
-
-  generateProgression = () => {
-    const scale = fiveToFive;
-    const newKey = Keys[Math.floor(Math.random() * Keys.length)];
-    const newScale = Tone.Frequency(newKey + "5")
-      .harmonize(scale)
-      .map((f) => Tone.Frequency(f).toNote());
-    const newProgression = ChordProgression.generate(8);
-    const newScalePos = Math.floor(Math.random() * scale.length);
-
-    this.setState({
-      ...this.state,
-      key: newKey,
-      progress: 0,
-      progression: newProgression,
-      scale: newScale,
-      genChordsOnce: true,
-      scalePos: newScalePos,
-    });
-  };
-
-  toggle = () => {
-    this.setState({ ...this.state, progress: 0 });
-    if (Tone.Transport.state === "started") {
-      this.noise.stop();
-      Tone.Transport.stop();
-      this.props.toggleWakeLock();
-    } else {
-      Tone.start();
-      Tone.Transport.start();
-      this.noise.start(0);
-      this.chords.start(0);
-      this.melody.start(0);
-      this.kickLoop.start(0);
-      this.snareLoop.start(0);
-      this.hatLoop.start(0);
-      this.props.toggleWakeLock();
-    }
-  };
-
-  stop = () => {
-    if (Tone.Transport.state === "started") {
-      this.noise.stop();
-      Tone.Transport.stop();
-      this.props.toggleWakeLock();
-    }
-  };
-
-  start = () => {
-    if (Tone.Transport.state !== "started") {
-      Tone.start();
-      Tone.Transport.start();
-      this.noise.start(0);
-      this.chords.start(0);
-      this.melody.start(0);
-      this.kickLoop.start(0);
-      this.snareLoop.start(0);
-      this.hatLoop.start(0);
-      this.props.toggleWakeLock();
-    }
-  };
+  //   this.setState({
+  //     ...this.state,
+  //     key: newKey,
+  //     progress: 0,
+  //     progression: newProgression,
+  //     scale: newScale,
+  //     genChordsOnce: true,
+  //     scalePos: newScalePos,
+  //   });
+  // };
 
   render() {
     return (
