@@ -12,6 +12,7 @@ import Step1 from "./step1";
 import SpaceDomination from "./spaceDomination";
 import DescriptionSection from "./descriptionSection";
 import IntroSection from "./introSection";
+import HeaderMenu from "./headerMenu";
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
 
@@ -33,11 +34,11 @@ class Player extends Component {
   render() {
     return (
       <>
-      <IntroSection/>
+        <IntroSection />
         <div id="starfield"></div>
         <div id="app">
           <SpaceDomination />
-         
+
           <section id="header">
             <div className="wrap">
               <div className="ui-inner-border t"></div>
@@ -61,9 +62,9 @@ class Player extends Component {
                     </svg>
                   </div>
                   <div id="description">
-                    
-                    
-                    <DescriptionSection/>
+
+
+                    <DescriptionSection />
 
                     {/* STEPS TO GET STARTED */}
                     <div className="text-box" id="login">
@@ -82,8 +83,6 @@ class Player extends Component {
                       </div>
                     </div>
                   </div>
-
-
                   <div className="ui-fx">
                     <div className="ui-inner-border l"></div>
                     <div className="ui-inner-border r"></div>
@@ -117,40 +116,7 @@ class Player extends Component {
                 </div>
               </div>
               <div className="ui-inner-border b">
-                <ul id="menu">
-                  <li>
-                    <button
-                      id="button"
-                      onClick={() => {
-                        const menu = document.getElementById("menu");
-                        menu.classList.toggle("show");
-                      }}
-                    >
-                      <span className="border"></span>
-                      <div className="roulette"></div>
-                    </button>
-                    <ul>
-                      <li>
-                        <a href="#finance">Finance</a>
-                      </li>
-                      <li>
-                        <a href="#mission">Mission</a>
-                      </li>
-                      <li>
-                        <a href="#features">Features</a>
-                      </li>
-                      <li>
-                        <a href="#commitment">Commitment</a>
-                      </li>
-                      <li>
-                        <a href="#tokens">Tokens</a>
-                      </li>
-                      <li>
-                        <a href="#login">Login/Register</a>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
+                <HeaderMenu />
               </div>
             </div>
           </section>
