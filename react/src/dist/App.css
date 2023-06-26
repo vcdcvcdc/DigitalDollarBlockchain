@@ -1234,6 +1234,11 @@ input {
   width: 80%;
 }
 
+.wallet-icon img {
+  width: 80px;
+  height: 80px;
+}
+
 @media (max-width: 540px) {
   #header .ui-inner-border.b,
 #header .ui-inner-border.t {

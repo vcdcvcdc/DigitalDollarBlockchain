@@ -6,7 +6,7 @@ const Step1 = () => {
         <div>
             <h3>Create/Connect your wallet</h3>
             <p>For a fully automated KYC process, and KARMA/gas receival </p>
-            <div className="">
+            <div className="pt-5">
                 <WealthWalletSDK />
             </div>
 

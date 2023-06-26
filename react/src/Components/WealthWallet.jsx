@@ -41,7 +41,7 @@ function WealthWalletSDK({ options }) {
         <>
           <>
             <span
-              className="btn btn-primary bg-orange pointer"
+              className=" pointer wallet-icon"
               onClick={() =>
                 wealthWallet.openWallet({
                   chainId: process.env.REACT_APP_CHAIN_ID,
@@ -55,7 +55,7 @@ function WealthWalletSDK({ options }) {
         </>
       ) : (
         <span
-          className="btn btn-primary bg-orange pointer"
+          className=" pointer wallet-icon"
           onClick={() =>
             wealthWallet?.connectWallet(
               (details) => {
