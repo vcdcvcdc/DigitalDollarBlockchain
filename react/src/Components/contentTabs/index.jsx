@@ -6,6 +6,7 @@ import "../contentTabs/dist/contentTabs.css";
 import DescriptionSection from "../descriptionSection";
 import HeaderMenu from "../headerMenu";
 import { createBleepsManager } from "@arwes/bleeps";
+import Success from "../success";
 
 //create a new component called ContentTabs
 const ContentTabs = () => {
