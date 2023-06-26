@@ -1,9 +1,25 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Animator } from "@arwes/react-animator";
 import { Text } from "@arwes/react-text";
 import Typist from "react-typist";
 
 function Tab1() {
+  useEffect(() => {
+    const audio = new Audio("https://next.arwes.dev/assets/sounds/type.webm");
+    audio.play();
+
+    return () => {
+      audio.pause();
+      audio.currentTime = 0;
+    };
+  }, []);
+
+  const handleTypingDone = () => {
+    const audio = new Audio("https://next.arwes.dev/assets/sounds/type.webm");
+    audio.pause();
+    audio.currentTime = 0;
+  };
+
   return (
     <Animator>
       <div className="text-box" id="finance">
@@ -14,11 +30,10 @@ function Tab1() {
             </text>
             <text x="50%" y="80%" textAnchor="middle">
               Digital Dollar Blockchain
-            </text> 
+            </text>
           </svg>
-          {/* <Text as="p" style={{ color: "#ddd" }}> */} 
-          <Typist avgTypingDelay={1} cursor={{ show: false }}>
-            <p>
+          <Text as="p" style={{ color: "#ddd" }}>
+            <Typist avgTypingDelay={20} onTypingDone={handleTypingDone}>
               The Digital Dollar Blockchain Corporation (DDBC) is rewriting the
               narrative of financial technology, pioneering an integration with
               the digital universe. Our cutting-edge blockchain, crafted for
@@ -28,9 +43,8 @@ function Tab1() {
               constancy of the USD within the digital world, redefining the
               dynamics of digital currencies. Experience the evolution of
               finance-- amplified.
-            </p>
-          </Typist>
-          {/* </Text> */}
+            </Typist>
+          </Text>
         </div>
       </div>
     </Animator>
