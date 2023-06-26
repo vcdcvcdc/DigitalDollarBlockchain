@@ -1,5 +1,19 @@
-.header-tabs {
+.header-tabs-top {
   position: absolute;
   top: 8vh;
   width: 39vw;
+}
+
+.header-tabs-bottom {
+  position: absolute;
+  bottom: 8vh;
+  width: 39vw;
+}
+
+.tab-btn {
+  transition: 0.15s;
+}
+.tab-btn.active, .tab-btn:hover {
+  background-color: #fff;
+  color: #000;
 }

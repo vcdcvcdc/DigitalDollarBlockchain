@@ -22,11 +22,12 @@ const ContentTabs = () => {
       <section id="header">
         <div className="wrap">
           <div className="ui-inner-border t"></div>
-          <div className="header-tabs text-center">
+          {/* HEADER TABS TOP  */}
+          <div className="header-tabs-top text-center">
             <div className="row">
               <div className="col">
                 <div
-                  className="pointer"
+                  className={(activeTab === "tab1" ? "active" : "") + " pointer tab-btn"}
                   onClick={() => {
                     playSound();
                     setActiveTab("tab1");
@@ -37,7 +38,7 @@ const ContentTabs = () => {
               </div>
               <div className="col">
                 <div
-                  className="pointer"
+                  className={(activeTab === "tab2" ? "active" : "") + " pointer tab-btn"}
                   onClick={() => {
                     setActiveTab("tab2");
                     playSound();
@@ -48,7 +49,7 @@ const ContentTabs = () => {
               </div>
               <div className="col">
                 <div
-                  className="pointer"
+                  className={(activeTab === "tab3" ? "active" : "") + " pointer tab-btn"}
                   onClick={() => {
                     setActiveTab("tab3");
                     playSound();
@@ -59,6 +60,7 @@ const ContentTabs = () => {
               </div>
             </div>
           </div>
+
           <div className="ui-grid">
             <div className="ui-box">
               <div className="text-container">
@@ -117,6 +119,46 @@ const ContentTabs = () => {
           <div className="ui-inner-border b">
             <HeaderMenu />
           </div>
+
+          {/* HEADER TABS BOTTOM  */}
+          <div className="header-tabs-bottom text-center">
+            <div className="row">
+              <div className="col">
+                <div
+                  className={(activeTab === "tab4" ? "active" : "") + " pointer tab-btn"}
+                  onClick={() => {
+                    playSound();
+                    setActiveTab("tab4");
+                  }}
+                >
+                  test 4
+                </div>
+              </div>
+              <div className="col">
+                <div
+                  className={(activeTab === "tab5" ? "active" : "") + " pointer tab-btn"}
+                  onClick={() => {
+                    setActiveTab("tab5");
+                    playSound();
+                  }}
+                >
+                  test 5
+                </div>
+              </div>
+              <div className="col">
+                <div
+                  className={(activeTab === "tab6" ? "active" : "") + " pointer tab-btn"}
+                  onClick={() => {
+                    setActiveTab("tab6");
+                    playSound();
+                  }}
+                >
+                  test 6
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
       </section>
     </>

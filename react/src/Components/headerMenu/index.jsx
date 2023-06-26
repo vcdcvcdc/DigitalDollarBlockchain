@@ -4,7 +4,7 @@ const HeaderMenu = () => {
 
     return (
         <ul id="menu">
-            <li>
+            {/* <li>
                 <button
                     id="button"
                     onClick={() => {
@@ -35,7 +35,7 @@ const HeaderMenu = () => {
                         <a href="#login">Login/Register</a>
                     </li>
                 </ul>
-            </li>
+            </li> */}
         </ul>
     );
 }
