@@ -2,19 +2,14 @@ import React, { Component } from "react";
 import { gsap } from "gsap";
 import { SplitText } from "gsap/SplitText";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import WealthWalletSDK from "./WealthWallet";
-import Step3 from "./step3";
-import Step4 from "./step4";
-import Step5 from "./step5";
 import Step6 from "./step6";
-import Step2 from "./step2";
 import Step1 from "./step1";
+import Step2 from "./step2";
 import SpaceDomination from "./spaceDomination";
 import DescriptionSection from "./descriptionSection";
 import IntroSection from "./introSection";
 import HeaderMenu from "./headerMenu";
 gsap.registerPlugin(SplitText, ScrollTrigger);
-
 
 class Player extends Component {
   constructor(props) {
@@ -29,7 +24,6 @@ class Player extends Component {
       scalePos: 0,
     };
   }
-
 
   render() {
     return (
@@ -62,8 +56,6 @@ class Player extends Component {
                     </svg>
                   </div>
                   <div id="description">
-
-
                     <DescriptionSection />
 
                     {/* STEPS TO GET STARTED */}
@@ -75,10 +67,7 @@ class Player extends Component {
                           </text>
                         </svg>
                         <Step1 />
-                        {/* <Step2/> */}
-                        <Step3 />
-                        {/* <Step4 /> */}
-                        {/* <Step5 /> */}
+                        <Step2 />
                         <Step6 />
                       </div>
                     </div>
