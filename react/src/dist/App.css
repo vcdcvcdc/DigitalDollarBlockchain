@@ -933,9 +933,10 @@ section .col-narrow {
 
 .text-container svg {
   display: block;
-  font: normal 6em/1.25 "TTSquaresCondensed-Thin";
+  font: normal 4em "TTSquaresCondensed-Thin";
   /* font: normal 10.5em 'TTSquaresCondensed-Thin'; */
   width: 100%;
+  height: 100px;
   margin: 0 auto;
 }
 
