@@ -14,9 +14,9 @@ function Tab1() {
             </text>
             <text x="50%" y="80%" textAnchor="middle">
               Digital Dollar Blockchain
-            </text>
+            </text> 
           </svg>
-          {/* <Text as="p" style={{ color: "#ddd" }}> */}
+          {/* <Text as="p" style={{ color: "#ddd" }}> */} 
           <Typist avgTypingDelay={1} cursor={{ show: false }}>
             <p>
               The Digital Dollar Blockchain Corporation (DDBC) is rewriting the
