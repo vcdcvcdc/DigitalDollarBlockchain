@@ -77,22 +77,26 @@ const ContentTabs = () => {
 
           <div className="ui-grid">
             <div className="ui-box">
-              <div className="text-container">
-                <svg>
-                  <symbol id="s-text">
-                    <text textAnchor="middle" x="50%" y="80%">
-                      Digital Dollar
-                    </text>
-                  </symbol>
-                  <g className="g-ants">
-                    <use xlinkHref="#s-text" className="text-copy"></use>
-                    <use xlinkHref="#s-text" className="text-copy"></use>
-                    <use xlinkHref="#s-text" className="text-copy"></use>
-                    <use xlinkHref="#s-text" className="text-copy"></use>
-                    <use xlinkHref="#s-text" className="text-copy"></use>
-                  </g>
-                </svg>
-              </div>
+
+              {activeTab === "tab1" && (
+                <div className="text-container">
+                  <svg>
+                    <symbol id="s-text">
+                      <text textAnchor="middle" x="50%" y="80%">
+                        Digital Dollar
+                      </text>
+                    </symbol>
+                    <g className="g-ants">
+                      <use xlinkHref="#s-text" className="text-copy"></use>
+                      <use xlinkHref="#s-text" className="text-copy"></use>
+                      <use xlinkHref="#s-text" className="text-copy"></use>
+                      <use xlinkHref="#s-text" className="text-copy"></use>
+                      <use xlinkHref="#s-text" className="text-copy"></use>
+                    </g>
+                  </svg>
+                </div>
+              )}
+
 
               <div id="description">
                 <DescriptionSection

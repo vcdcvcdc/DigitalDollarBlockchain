@@ -1240,6 +1240,10 @@ input {
 }
 
 @media (max-width: 540px) {
+  .ui-circles.l, .ui-circles.r {
+    display: none;
+  }
+
   #header .ui-inner-border.b,
 #header .ui-inner-border.t {
     width: 98vw !important;
