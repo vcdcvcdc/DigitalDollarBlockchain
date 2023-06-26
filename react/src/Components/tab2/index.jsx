@@ -4,6 +4,21 @@ import { Text } from "@arwes/react-text";
 import Typist from "react-typist";
 
 function Tab2() {
+  useEffect(() => {
+    const audio = new Audio("https://next.arwes.dev/assets/sounds/type.webm");
+    audio.play();
+
+    return () => {
+      audio.pause();
+      audio.currentTime = 0;
+    };
+  }, []);
+
+  const handleTypingDone = () => {
+    const audio = new Audio("https://next.arwes.dev/assets/sounds/type.webm");
+    audio.pause();
+    audio.currentTime = 0;
+  };
   return (
     <Animator>
       <div className="text-box" id="mission">
@@ -13,14 +28,14 @@ function Tab2() {
               Our Mission
             </text>
           </svg>
-          <p>
+          <Text as="p" style={{ color: "#ddd" }}>
             Our aspiration is a future where digital currencies are standard,
             and financial operations are as effortless as sending a message.
             DDBC leads this transformation, prioritizing superior standards of
             regulatory compliance, risk mitigation, and security. We are not
             merely engineering a digital currency; we are nurturing trust in a
             digital universe, interconnected modern necessity.
-          </p>
+          </Text>
           <svg viewBox="0 -20 1320 70">
             <text x="50%" y="50%" textAnchor="middle">
               Our Commitment

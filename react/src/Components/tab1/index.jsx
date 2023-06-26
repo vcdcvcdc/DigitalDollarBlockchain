@@ -4,21 +4,21 @@ import { Text } from "@arwes/react-text";
 import Typist from "react-typist";
 
 function Tab1() {
-  useEffect(() => {
-    const audio = new Audio("https://next.arwes.dev/assets/sounds/type.webm");
-    audio.play();
+  //   useEffect(() => {
+  //     const audio = new Audio("https://next.arwes.dev/assets/sounds/type.webm");
+  //     audio.play();
 
-    return () => {
-      audio.pause();
-      audio.currentTime = 0;
-    };
-  }, []);
+  //     return () => {
+  //       audio.pause();
+  //       audio.currentTime = 0;
+  //     };
+  //   }, []);
 
-  const handleTypingDone = () => {
-    const audio = new Audio("https://next.arwes.dev/assets/sounds/type.webm");
-    audio.pause();
-    audio.currentTime = 0;
-  };
+  //   const handleTypingDone = () => {
+  //     const audio = new Audio("https://next.arwes.dev/assets/sounds/type.webm");
+  //     audio.pause();
+  //     audio.currentTime = 0;
+  //   };
 
   return (
     <Animator>
