@@ -27,35 +27,41 @@ const ContentTabs = () => {
             <div className="row">
               <div className="col">
                 <div
-                  className={(activeTab === "tab1" ? "active" : "") + " pointer tab-btn"}
+                  className={
+                    (activeTab === "tab1" ? "active" : "") + " pointer tab-btn"
+                  }
                   onClick={() => {
                     playSound();
                     setActiveTab("tab1");
                   }}
                 >
-                  test 1
+                  who we are
                 </div>
               </div>
               <div className="col">
                 <div
-                  className={(activeTab === "tab2" ? "active" : "") + " pointer tab-btn"}
+                  className={
+                    (activeTab === "tab2" ? "active" : "") + " pointer tab-btn"
+                  }
                   onClick={() => {
                     setActiveTab("tab2");
                     playSound();
                   }}
                 >
-                  test 2
+                  our mission
                 </div>
               </div>
               <div className="col">
                 <div
-                  className={(activeTab === "tab3" ? "active" : "") + " pointer tab-btn"}
+                  className={
+                    (activeTab === "tab3" ? "active" : "") + " pointer tab-btn"
+                  }
                   onClick={() => {
                     setActiveTab("tab3");
                     playSound();
                   }}
                 >
-                  test 3
+                  innovative features
                 </div>
               </div>
             </div>
@@ -125,40 +131,45 @@ const ContentTabs = () => {
             <div className="row">
               <div className="col">
                 <div
-                  className={(activeTab === "tab4" ? "active" : "") + " pointer tab-btn"}
+                  className={
+                    (activeTab === "tab4" ? "active" : "") + " pointer tab-btn"
+                  }
                   onClick={() => {
                     playSound();
                     setActiveTab("tab4");
                   }}
                 >
-                  test 4
+                  our tokens
                 </div>
               </div>
               <div className="col">
                 <div
-                  className={(activeTab === "tab5" ? "active" : "") + " pointer tab-btn"}
+                  className={
+                    (activeTab === "tab5" ? "active" : "") + " pointer tab-btn"
+                  }
                   onClick={() => {
                     setActiveTab("tab5");
                     playSound();
                   }}
                 >
-                  test 5
+                  DDBC
                 </div>
               </div>
               <div className="col">
                 <div
-                  className={(activeTab === "tab6" ? "active" : "") + " pointer tab-btn"}
+                  className={
+                    (activeTab === "tab6" ? "active" : "") + " pointer tab-btn"
+                  }
                   onClick={() => {
                     setActiveTab("tab6");
                     playSound();
                   }}
                 >
-                  test 6
+                  contract deployment
                 </div>
               </div>
             </div>
           </div>
-
         </div>
       </section>
     </>
