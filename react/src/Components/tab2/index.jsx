@@ -14,11 +14,6 @@ function Tab2() {
     };
   }, []);
 
-  const handleTypingDone = () => {
-    const audio = new Audio("https://next.arwes.dev/assets/sounds/type.webm");
-    audio.pause();
-    audio.currentTime = 0;
-  };
   return (
     <Animator>
       <div className="text-box" id="mission">
@@ -41,24 +36,27 @@ function Tab2() {
               Our Commitment
             </text>
           </svg>
-          <p>
-            In striving to create a secure and transparent digital currency
-            ecosystem, we comply with rigorous operational guidelines:
-          </p>
-          <p>
-            <strong> Sole Existence:</strong> DD is exclusively present on our
-            blockchain, guarding against fraudulent activities and enjoying the
-            benefits of multiple blockchains. Collateralized Agreements: We
-            guarantee appropriate collateral for all smart contracts, minimizing
-            default risk and leveraging advanced smart contract abilities.
-            Thorough Approval Procedures: All smart contracts are meticulously
-            audited, insured, assigned a risk rating, and displayed publicly,
-            fortified by our robust infrastructure. Ecosystem Enhancement: Every
-            contract aims to add value to the DDBC ecosystem and contribute to
-            the growth of the our connected network. Transparency: While
-            contracts can be private, their safety is ensured during audits, and
-            our connection to cross-channel communication.
-          </p>
+          <Text as="p" style={{ color: "#ddd" }}>
+            <p>
+              In striving to create a secure and transparent digital currency
+              ecosystem, we comply with rigorous operational guidelines:
+            </p>
+            <p>
+              <strong> Sole Existence:</strong> DD is exclusively present on our
+              blockchain, guarding against fraudulent activities and enjoying
+              the benefits of multiple blockchains. Collateralized Agreements:
+              We guarantee appropriate collateral for all smart contracts,
+              minimizing default risk and leveraging advanced smart contract
+              abilities. Thorough Approval Procedures: All smart contracts are
+              meticulously audited, insured, assigned a risk rating, and
+              displayed publicly, fortified by our robust infrastructure.
+              Ecosystem Enhancement: Every contract aims to add value to the
+              DDBC ecosystem and contribute to the growth of the our connected
+              network. Transparency: While contracts can be private, their
+              safety is ensured during audits, and our connection to
+              cross-channel communication.
+            </p>
+          </Text>
         </div>
       </div>
     </Animator>

@@ -35,7 +35,7 @@ const ContentTabs = () => {
                     setActiveTab("tab1");
                   }}
                 >
-                  who we are
+                  IDENTITY
                 </div>
               </div>
               <div className="col">
@@ -48,7 +48,7 @@ const ContentTabs = () => {
                     playSound();
                   }}
                 >
-                  our mission
+                  MISSION
                 </div>
               </div>
               <div className="col">
@@ -61,7 +61,7 @@ const ContentTabs = () => {
                     playSound();
                   }}
                 >
-                  innovative features
+                  INNOVATIONS
                 </div>
               </div>
             </div>
@@ -139,7 +139,7 @@ const ContentTabs = () => {
                     setActiveTab("tab4");
                   }}
                 >
-                  our tokens
+                  TOKENS
                 </div>
               </div>
               <div className="col">
@@ -165,7 +165,7 @@ const ContentTabs = () => {
                     playSound();
                   }}
                 >
-                  contract deployment
+                  CONTRACTS
                 </div>
               </div>
             </div>
