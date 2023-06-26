@@ -13,9 +13,9 @@ function Success() {
       {showPopup && (
         <div className="popup">
           <div className="popup-content">
-            <button className="close-btn" onClick={closePopup}>
+            <div className="close-btn pointer pr-5 pt-4" onClick={closePopup}>
               Close
-            </button>
+            </div>
             <div class="yas5">
               <div class="All">
                 <svg class="svgWrapper">
