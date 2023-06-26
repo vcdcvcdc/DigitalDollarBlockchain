@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/static/css/main.a79039da.css",
-    "main.js": "/static/js/main.e001cf59.js",
+    "main.js": "/static/js/main.b33293dd.js",
     "static/media/WW_icon_with_border.svg": "/static/media/WW_icon_with_border.df5c9c6afa78d86e8a6b7de8987956ea.svg",
     "static/media/WW_icon.svg": "/static/media/WW_icon.dea4e1227254564b8d901631b3b7e9b7.svg",
     "index.html": "/index.html",
     "main.a79039da.css.map": "/static/css/main.a79039da.css.map",
-    "main.e001cf59.js.map": "/static/js/main.e001cf59.js.map"
+    "main.b33293dd.js.map": "/static/js/main.b33293dd.js.map"
   },
   "entrypoints": [
     "static/css/main.a79039da.css",
-    "static/js/main.e001cf59.js"
+    "static/js/main.b33293dd.js"
   ]
 }
