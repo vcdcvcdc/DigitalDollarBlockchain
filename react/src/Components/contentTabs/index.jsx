@@ -128,7 +128,7 @@ const ContentTabs = () => {
 
           {/* HEADER TABS BOTTOM  */}
           <div className="header-tabs-bottom text-center">
-            <div className="row">
+            <div className="row align-items-center">
               <div className="col">
                 <div
                   className={

@@ -1277,7 +1277,7 @@ section .col-narrow {
   cursor: pointer;
 }
 
-input{
+input {
   margin-top: 15px;
   margin-bottom: 15px;
   border: 1px solid #00ffc3;
@@ -1287,4 +1287,13 @@ input{
   font-weight: 600;
   padding: 10px;
   width: 80%;
+}
+
+
+@media (max-width:540px) {
+
+  #header .ui-inner-border.b,
+  #header .ui-inner-border.t {
+    width: 98vw !important;
+  }
 }

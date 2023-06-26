@@ -17,3 +17,15 @@
   background-color: #fff;
   color: #000;
 }
+
+@media (max-width: 540px) {
+  .header-tabs-top {
+    top: 6vh;
+    width: 97vw;
+  }
+
+  .header-tabs-bottom {
+    bottom: 9vh;
+    width: 97vw;
+  }
+}
