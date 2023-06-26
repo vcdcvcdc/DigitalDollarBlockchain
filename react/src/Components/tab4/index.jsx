@@ -4,15 +4,6 @@ import { Text } from "@arwes/react-text";
 import Typist from "react-typist";
 
 function Tab4() {
-  useEffect(() => {
-    const audio = new Audio("https://next.arwes.dev/assets/sounds/type.webm");
-    audio.play();
-
-    return () => {
-      audio.pause();
-      audio.currentTime = 0;
-    };
-  }, []);
   return (
     <Animator>
       <div className="text-box" id="tokens">

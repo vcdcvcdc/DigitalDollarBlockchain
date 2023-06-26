@@ -16,6 +16,11 @@ const ContentTabs = () => {
     audio.play();
   };
 
+  const playSoundText = () => {
+    const audio = new Audio("https://next.arwes.dev/assets/sounds/type.webm");
+    audio.play();
+  };
+
   return (
     <>
       <div></div>
@@ -33,6 +38,7 @@ const ContentTabs = () => {
                   onClick={() => {
                     playSound();
                     setActiveTab("tab1");
+                    playSoundText();
                   }}
                 >
                   IDENTITY
@@ -46,6 +52,7 @@ const ContentTabs = () => {
                   onClick={() => {
                     setActiveTab("tab2");
                     playSound();
+                    playSoundText();
                   }}
                 >
                   MISSION
@@ -59,6 +66,7 @@ const ContentTabs = () => {
                   onClick={() => {
                     setActiveTab("tab3");
                     playSound();
+                    playSoundText();
                   }}
                 >
                   INNOVATIONS
@@ -137,6 +145,7 @@ const ContentTabs = () => {
                   onClick={() => {
                     playSound();
                     setActiveTab("tab4");
+                    playSoundText();
                   }}
                 >
                   TOKENS
