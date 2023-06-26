@@ -33,17 +33,17 @@ function Tab1() {
             </text>
           </svg>
           <Text as="p" style={{ color: "#ddd" }}>
-            <Typist avgTypingDelay={20} onTypingDone={handleTypingDone}>
-              The Digital Dollar Blockchain Corporation (DDBC) is rewriting the
-              narrative of financial technology, pioneering an integration with
-              the digital universe. Our cutting-edge blockchain, crafted for
-              optimum security, lucidity, and ease of access, revolutionizes
-              digital currency transactions, making them as simple as sending a
-              text. Our primary offering, the Digital Dollar (DD), offers the
-              constancy of the USD within the digital world, redefining the
-              dynamics of digital currencies. Experience the evolution of
-              finance-- amplified.
-            </Typist>
+            {/* <Typist avgTypingDelay={20} onTypingDone={handleTypingDone}> */}
+            The Digital Dollar Blockchain Corporation (DDBC) is rewriting the
+            narrative of financial technology, pioneering an integration with
+            the digital universe. Our cutting-edge blockchain, crafted for
+            optimum security, lucidity, and ease of access, revolutionizes
+            digital currency transactions, making them as simple as sending a
+            text. Our primary offering, the Digital Dollar (DD), offers the
+            constancy of the USD within the digital world, redefining the
+            dynamics of digital currencies. Experience the evolution of
+            finance-- amplified.
+            {/* </Typist> */}
           </Text>
         </div>
       </div>
