@@ -4,6 +4,15 @@ import { Text } from "@arwes/react-text";
 import Typist from "react-typist";
 
 function Tab4() {
+  useEffect(() => {
+    const audio = new Audio("https://next.arwes.dev/assets/sounds/type.webm");
+    audio.play();
+
+    return () => {
+      audio.pause();
+      audio.currentTime = 0;
+    };
+  }, []);
   return (
     <Animator>
       <div className="text-box" id="tokens">
@@ -14,7 +23,7 @@ function Tab4() {
             </text>
           </svg>
           <h3>Digital Dollar (DD)</h3>
-          <p>
+          <Text as="p" style={{ color: "#ddd" }}>
             The DD is a digital asset uniting the stability of the US Dollar
             with the prowess of blockchain technology. Fully collateralized and
             backed 1:1 with USD, DD promises stability and transparency,
@@ -22,28 +31,28 @@ function Tab4() {
             currency. The Digital Dollar Funds are never overleveraged, and
             public API access to the Corporate Bank account assures that the
             Fiat Balance matches the Digital Dollar total supply at all times..
-          </p>
+          </Text>
           <h3>Karma</h3>
-          <p>
+          <Text as="p" style={{ color: "#ddd" }}>
             Alongside DD, we also employ Karma, a native token without monetary
             value. It cannot be bought, sold, or transferred, but rewards
             participants contributing to the platform. It serves as a
             transaction fee and grants VIP access to certain benefits within
             ecosystems such as communities or events.
-          </p>
+          </Text>
           <h3>Auditor Rewards</h3>
-          <p>
+          <Text as="p" style={{ color: "#ddd" }}>
             To maintain the highest standards, we provide auditors and review
             committee members with a portion of contract revenues, further
             fortified by our robust infrastructure. In case of contract failure,
             penalties apply, motivating meticulous review and oversight
-          </p>
+          </Text>
           <h3>Experience the Digital Dollar</h3>
-          <p>
+          <Text as="p" style={{ color: "#ddd" }}>
             We are currently privately live, offering a sneak peek into the
             future through our platformk. Experience now the future generation
             of digital currency, amplified by the DDBC.
-          </p>
+          </Text>
         </div>
       </div>
     </Animator>

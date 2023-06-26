@@ -14,11 +14,6 @@ function Tab2() {
     };
   }, []);
 
-  const handleTypingDone = () => {
-    const audio = new Audio("https://next.arwes.dev/assets/sounds/type.webm");
-    audio.pause();
-    audio.currentTime = 0;
-  };
   return (
     <Animator>
       <div className="text-box" id="mission">
