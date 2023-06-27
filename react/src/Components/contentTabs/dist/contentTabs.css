@@ -21,6 +21,30 @@
   animation: neon-glow 1.5s ease-in-out infinite alternate;
 }
 
+.neon-effect {
+  display: inline-block;
+  position: relative;
+  background-color: transparent;
+  /* or any desired background color */
+}
+
+.neon-effect img {
+  transition: filter 0.5s ease;
+}
+
+.neon-effect img:hover {
+  filter: drop-shadow(0 0 10px #00ffc3) brightness(200%);
+  animation: neon-glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon-glow {
+  0% {
+    filter: drop-shadow(0 0 10px #00ffc3) brightness(200%);
+  }
+  100% {
+    filter: drop-shadow(0 0 20px #00ffc3) brightness(300%);
+  }
+}
 @keyframes neon-glow {
   0% {
     text-shadow: 0 0 10px #00ffc3, 0 0 20px #00ffc3, 0 0 30px #00ffc3, 0 0 40px #00ffc3, 0 0 70px #00ffc3, 0 0 80px #00ffc3, 0 0 100px #00ffc3, 0 0 150px #00ffc3;

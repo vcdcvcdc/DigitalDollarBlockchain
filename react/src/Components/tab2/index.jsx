@@ -1,7 +1,6 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Animator } from "@arwes/react-animator";
 import { Text } from "@arwes/react-text";
-import Typist from "react-typist";
 
 function Tab2() {
   return (

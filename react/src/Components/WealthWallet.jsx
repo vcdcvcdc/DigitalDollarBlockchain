@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { WealthWallet } from "wealth-wallet-sdk";
-import { useEffect, useState, useMemo } from "react";
+import { useEffect, useState } from "react";
 import WWDetailsContext from "../contexts/wwDetailsContext";
 
 import wwIcon from "../images/WW_icon.svg";
@@ -41,7 +41,7 @@ function WealthWalletSDK({ options }) {
         <>
           <>
             <span
-              className=" pointer wallet-icon"
+              className=" pointer wallet-icon "
               onClick={() =>
                 wealthWallet.openWallet({
                   chainId: process.env.REACT_APP_CHAIN_ID,
@@ -49,13 +49,19 @@ function WealthWalletSDK({ options }) {
                 })
               }
             >
-              <img src={wwIconBorder} alt="OPEN WALLET" />
+              <div className="neon-effect">
+                <img
+                  src={wwIconBorder}
+                  alt="OPEN WALLET"
+                  className="wallet-neon"
+                />
+              </div>
             </span>
           </>
         </>
       ) : (
         <span
-          className=" pointer wallet-icon"
+          className=" pointer wallet-icon "
           onClick={() =>
             wealthWallet?.connectWallet(
               (details) => {
@@ -72,10 +78,9 @@ function WealthWalletSDK({ options }) {
             )
           }
         >
-          <img
-            src={wwIcon}
-            alt="CONNECT WALLET"
-          />
+          <div className="neon-effect">
+            <img src={wwIcon} alt="CONNECT WALLET" />
+          </div>
         </span>
       )}
     </>

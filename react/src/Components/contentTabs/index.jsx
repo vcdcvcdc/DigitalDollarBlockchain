@@ -5,8 +5,6 @@ import "../contentTabs/dist/contentTabs.css";
 
 import DescriptionSection from "../descriptionSection";
 import HeaderMenu from "../headerMenu";
-import { createBleepsManager } from "@arwes/bleeps";
-import Success from "../success";
 
 //create a new component called ContentTabs
 const ContentTabs = () => {
@@ -78,7 +76,6 @@ const ContentTabs = () => {
 
           <div className="ui-grid">
             <div className="ui-box">
-
               {activeTab === "tab1" && (
                 <div className="text-container">
                   <svg>
@@ -97,7 +94,6 @@ const ContentTabs = () => {
                   </svg>
                 </div>
               )}
-
 
               <div id="description">
                 <DescriptionSection
