@@ -29,7 +29,6 @@ class Player extends Component {
         <div id="starfield"></div>
         <div id="app">
           <SpaceDomination />
-          <Success />
           <ContentTabs />
         </div>
       </>
