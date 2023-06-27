@@ -1251,11 +1251,11 @@ input {
   }
 
   #header .ui-inner-border.b {
-    bottom: 10vh;
+    bottom: 12vh;
   }
 
   .ui-grid .ui-box #description {
-    margin-bottom: 40px;
+    margin-bottom: 50px;
   }
 }
 .tab-center {
