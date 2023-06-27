@@ -1249,6 +1249,14 @@ input {
 #header .ui-inner-border.t {
     width: 98vw !important;
   }
+
+  #header .ui-inner-border.b {
+    bottom: 10vh;
+  }
+
+  .ui-grid .ui-box #description {
+    margin-bottom: 40px;
+  }
 }
 .tab-center {
   position: absolute;
