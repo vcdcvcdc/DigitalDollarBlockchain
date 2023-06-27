@@ -1,11 +1,13 @@
 import React, { useState, useContext, useEffect } from "react";
 import axios from "axios";
 import WWDetailsContext from "../../contexts/wwDetailsContext";
+import SuccessContext from "../../contexts/successContext";
 import Success from "../success";
 
 const Step2 = () => {
   const { wwDetails } = useContext(WWDetailsContext);
-  const [showSuccess, setShowSuccess] = useState(false);
+  const { successPopup, setSuccessPopup } = useContext(SuccessContext);
+  // const [showSuccess, setShowSuccess] = useState(true);
 
   useEffect(() => {
     if (wwDetails?.userAddress) {
@@ -91,7 +93,7 @@ const Step2 = () => {
       .then((response) => {
         console.log("accept account congrats", response);
         // alert("Congratulations! You have been whitelisted!");
-        setShowSuccess(true);
+        setSuccessPopup(true);
         // Handle the response here
       })
       .catch((error) => {
@@ -100,7 +102,7 @@ const Step2 = () => {
       });
   }
 
-  return <>{showSuccess && <Success />}</>;
+  return <></>;
 };
 
 export default Step2;

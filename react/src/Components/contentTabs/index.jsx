@@ -1,14 +1,17 @@
 //create a new component called ContentTabs
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 //import the css file
 import "../contentTabs/dist/contentTabs.css";
+import SuccessContext from "../../contexts/successContext";
 
 import DescriptionSection from "../descriptionSection";
 import HeaderMenu from "../headerMenu";
+import Success from "../success";
 
 //create a new component called ContentTabs
 const ContentTabs = () => {
   const [activeTab, setActiveTab] = useState("tab1");
+  const { successPopup, setSuccessPopup } = useContext(SuccessContext);
 
   const playSound = () => {
     const audio = new Audio("https://next.arwes.dev/assets/sounds/click.mp3");
@@ -96,6 +99,8 @@ const ContentTabs = () => {
               )}
 
               <div id="description">
+                {successPopup && <Success />}
+                {successPopup && console.log("successPopup", successPopup)}
                 <DescriptionSection
                   setActiveTab={setActiveTab}
                   activeTab={activeTab}

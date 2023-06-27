@@ -1,8 +1,5 @@
 import React, { useState } from "react";
 
-import Step6 from "../step6";
-import Step1 from "../step1";
-import Step2 from "../step2";
 import Tab1 from "../tab1";
 import Tab2 from "../tab2";
 import Tab3 from "../tab3";
