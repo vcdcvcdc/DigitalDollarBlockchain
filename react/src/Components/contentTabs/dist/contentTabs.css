@@ -14,10 +14,21 @@
   transition: 0.15s;
 }
 .tab-btn.active, .tab-btn:hover {
-  background-color: #fff;
-  color: #000;
+  display: inline-block;
+  font-size: 1.2rem;
+  color: #00ffc3;
+  text-shadow: 0 0 10px #00ffc3, 0 0 20px #00ffc3, 0 0 30px #00ffc3, 0 0 40px #00ffc3, 0 0 70px #00ffc3, 0 0 80px #00ffc3, 0 0 100px #00ffc3, 0 0 150px #00ffc3;
+  animation: neon-glow 1.5s ease-in-out infinite alternate;
 }
 
+@keyframes neon-glow {
+  0% {
+    text-shadow: 0 0 10px #00ffc3, 0 0 20px #00ffc3, 0 0 30px #00ffc3, 0 0 40px #00ffc3, 0 0 70px #00ffc3, 0 0 80px #00ffc3, 0 0 100px #00ffc3, 0 0 150px #00ffc3;
+  }
+  100% {
+    text-shadow: 0 0 20px #00ffc3, 0 0 30px #00ffc3, 0 0 40px #00ffc3, 0 0 50px #00ffc3, 0 0 80px #00ffc3, 0 0 90px #00ffc3, 0 0 110px #00ffc3, 0 0 160px #00ffc3;
+  }
+}
 @media (max-width: 540px) {
   .header-tabs-top {
     top: 6vh;

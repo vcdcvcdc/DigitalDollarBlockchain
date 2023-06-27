@@ -1240,7 +1240,8 @@ input {
 }
 
 @media (max-width: 540px) {
-  .ui-circles.l, .ui-circles.r {
+  .ui-circles.l,
+.ui-circles.r {
     display: none;
   }
 
@@ -1248,4 +1249,11 @@ input {
 #header .ui-inner-border.t {
     width: 98vw !important;
   }
+}
+.tab-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
 }

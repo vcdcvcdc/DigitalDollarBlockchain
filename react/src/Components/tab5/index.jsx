@@ -8,7 +8,7 @@ import Step2 from "../step2";
 function Tab5() {
   return (
     <Animator>
-      <div className="text-box" id="login">
+      <div className="text-box tab-center" id="login">
         <div className="scroll-content">
           <svg viewBox="0 -20 1320 70">
             <text x="50%" y="50%" textAnchor="middle">
