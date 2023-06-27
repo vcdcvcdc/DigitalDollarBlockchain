@@ -8,7 +8,7 @@ import SuccessContext from "./contexts/successContext";
 const App = (props) => {
   const { toggleWakeLock } = useWakeLock();
   const [wwDetails, setWwDetails] = useState();
-  const [successPopup, setSuccessPopup] = useState(true);
+  const [successPopup, setSuccessPopup] = useState(false);
 
   return (
     <>
