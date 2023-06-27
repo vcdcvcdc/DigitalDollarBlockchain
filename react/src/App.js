@@ -5,7 +5,7 @@ import Player from "./Components/Player";
 import WWDetailsContext from "./contexts/wwDetailsContext";
 
 const App = (props) => {
-  const { toggleWakeLock, wakeLockActive } = useWakeLock();
+  const { toggleWakeLock } = useWakeLock();
   const [wwDetails, setWwDetails] = useState();
 
   return (

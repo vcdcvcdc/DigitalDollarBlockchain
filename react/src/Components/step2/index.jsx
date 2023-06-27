@@ -4,7 +4,6 @@ import WWDetailsContext from "../../contexts/wwDetailsContext";
 import Success from "../success";
 
 const Step2 = () => {
-  const [address, setAddress] = useState("");
   const { wwDetails } = useContext(WWDetailsContext);
   const [showSuccess, setShowSuccess] = useState(false);
 

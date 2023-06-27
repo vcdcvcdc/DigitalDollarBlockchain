@@ -5,7 +5,6 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SpaceDomination from "./spaceDomination";
 import IntroSection from "./introSection";
 import ContentTabs from "./contentTabs";
-import Success from "./success";
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
 class Player extends Component {

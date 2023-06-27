@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Animator } from "@arwes/react-animator";
 import Step6 from "../step6";
 
