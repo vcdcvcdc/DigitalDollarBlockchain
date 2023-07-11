@@ -19,8 +19,8 @@ function Tab3() {
           </svg>
           <Text as="p" style={{ color: "#ddd" }}>
             <div className="row py-4 ">
-              <div className="col-md-8 col-12">
-                <h3 className="pt-3 text-md-left">Fee-Free Economy</h3>
+              <div className="col-md-8 col-12 order-md-0 order-1">
+                <h5 className="pt-3 text-md-left">Fee-Free Economy</h5>
                 <p className="text-md-left">
                   Introducing Karma, our native token that revolutionizes
                   transaction fees. With the innovative 'gas fee' management,
@@ -32,7 +32,7 @@ function Tab3() {
                   significant obstacles due to gas fees.
                 </p>
               </div>
-              <div className="col-md-4 col-12">
+              <div className="col-md-4 col-12 order-md-1 order-0">
                 <img src={dd} alt="dd" className="img-fluid" />
               </div>
             </div>
@@ -42,9 +42,9 @@ function Tab3() {
                 <img src={dd} alt="dd" className="img-fluid" />
               </div>
               <div className="col-md-8 col-12">
-                <h3 className="pt-3 text-md-right">
+                <h5 className="pt-3 text-md-right">
                   Hassle-Free Digital Engagement
-                </h3>
+                </h5>
                 <p className="text-md-right">
                   The Digital Dollar Blockchain is a user-centric platform that
                   combines blockchain advantages. It offers an accessible,
@@ -57,8 +57,8 @@ function Tab3() {
             </div>
 
             <div className="row py-4 ">
-              <div className="col-md-8 col-12">
-                <h3 className="pt-3 text-md-left">Building Trust</h3>
+              <div className="col-md-8 col-12 order-md-0 order-1">
+                <h5 className="pt-3 text-md-left">Building Trust</h5>
                 <p className="text-md-left">
                   Moreover, DDBC's strict observance of regulatory compliance,
                   transparency, and meticulous approval processes means users
@@ -68,7 +68,7 @@ function Tab3() {
                   hurdle for potential users.
                 </p>
               </div>
-              <div className="col-md-4 col-12">
+              <div className="col-md-4 col-12 order-md-1 order-0">
                 <img src={dd} alt="dd" className="img-fluid" />
               </div>
             </div>
@@ -78,7 +78,7 @@ function Tab3() {
                 <img src={dd} alt="dd" className="img-fluid" />
               </div>
               <div className="col-md-8 col-12">
-                <h3 className="pt-3 text-md-right">Fair Finance</h3>
+                <h5 className="pt-3 text-md-right">Fair Finance</h5>
                 <p className="text-md-right">
                   As a non-profit, we prioritize secure, fair transactions,
                   serving the common user. We focus on democratizing financial
@@ -89,8 +89,8 @@ function Tab3() {
             </div>
 
             <div className="row py-4 ">
-              <div className="col-md-8 col-12">
-                <h3 className="pt-3 text-md-left">User Empowered</h3>
+              <div className="col-md-8 col-12 order-md-0 order-1">
+                <h5 className="pt-3 text-md-left">User Empowered</h5>
                 <p className="text-md-left">
                   The Digital Dollar Blockchain (DDBC) is an open-market
                   platform with unique benefits. Unlike other platforms, DDBC
@@ -99,7 +99,7 @@ function Tab3() {
                   user decisions and activities, preventing manipulation.
                 </p>
               </div>
-              <div className="col-md-4 col-12">
+              <div className="col-md-4 col-12 order-md-1 order-0">
                 <img src={dd} alt="dd" className="img-fluid" />
               </div>
             </div>
@@ -109,7 +109,7 @@ function Tab3() {
                 <img src={dd} alt="dd" className="img-fluid" />
               </div>
               <div className="col-md-8 col-12">
-                <h3 className="pt-3 text-md-right">Connecting Blockchains</h3>
+                <h5 className="pt-3 text-md-right">Connecting Blockchains</h5>
                 <p className="text-md-right">
                   Additionally, our interoperability connections across multiple
                   blockchains, providing users a seamless experience. This

@@ -15,6 +15,13 @@
   border-bottom: 1px solid rgba(0, 255, 195, 0.6);
 }
 
+.ui-grid .ui-box #description .text-box h5 {
+  font-style: normal;
+  color: #00ffc3;
+  font-size: 32px;
+  margin-bottom: 0px;
+}
+
 @media (max-width: 500px) {
   #description .text-box-absolute {
     position: relative;
