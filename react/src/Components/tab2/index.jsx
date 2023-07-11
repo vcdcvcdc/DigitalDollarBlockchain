@@ -5,7 +5,7 @@ import { Text } from "@arwes/react-text";
 function Tab2() {
   return (
     <Animator>
-      <div className="text-box" id="mission">
+      <div className="text-box text-box-absolute" id="mission">
         <div className="scroll-content">
           <svg viewBox="0 -20 1320 70">
             <text x="50%" y="50%" textAnchor="middle">
