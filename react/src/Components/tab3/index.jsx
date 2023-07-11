@@ -16,20 +16,20 @@ function Tab3() {
             </text>
           </svg>
           <Text as="p" style={{ color: "#ddd" }}>
-            <h3 className="">User Empowered</h3>
+            <h3 className="pt-3">User Empowered</h3>
             <p>
               The Digital Dollar Blockchain (DDBC) is an open-market platform with unique benefits.
               Unlike other platforms, DDBC doesn't have token ownership by proprietors. This ensures
               that the value of each Digital Dollar token (DD) is determined by user decisions and
               activities, preventing manipulation.
             </p>
-            <h3 className="">Fair Finance</h3>
+            <h3 className="pt-3">Fair Finance</h3>
             <p>
               As a non-profit, we prioritize secure, fair transactions, serving the common user.
               We focus on democratizing financial services over chasing profits, encouraging
               wider user participation and enhancing platform flexibility.
             </p>
-            <h3 className="">Fee-Free Economy</h3>
+            <h3 className="pt-3">Fee-Free Economy</h3>
             <p>
               Introducing Karma, our native token that revolutionizes transaction
               fees. With the innovative 'gas fee' management, users earn Karma points
@@ -38,14 +38,14 @@ function Tab3() {
               free participation in economic activities. It especially benefits micro-transaction
               users who would otherwise face significant obstacles due to gas fees.
             </p>
-            <h3 className="">Connecting Blockchains</h3>
+            <h3 className="pt-3">Connecting Blockchains</h3>
             <p>
               Additionally, our interoperability connections across multiple
               blockchains, providing users a seamless experience. This feature
               offers users the flexibility to transact across different
               ecosystems with ease.
             </p>
-            <h3 className="">Building Trust</h3>
+            <h3 className="pt-3">Building Trust</h3>
             <p>
               Moreover, DDBC's strict observance of regulatory compliance,
               transparency, and meticulous approval processes means users can
@@ -54,7 +54,7 @@ function Tab3() {
               sphere, where trust is often a significant hurdle for potential
               users.
             </p>
-            <h3 className="">Hassle-Free Digital Engagement</h3>
+            <h3 className="pt-3">Hassle-Free Digital Engagement</h3>
             <p>
               The Digital Dollar Blockchain is a user-centric platform that combines
               blockchain advantages. It offers an accessible, transparent marketplace,
