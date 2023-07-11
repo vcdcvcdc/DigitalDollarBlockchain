@@ -11,6 +11,10 @@
   height: auto;
 }
 
+.border-bottom-neon {
+  border-bottom: 1px solid rgba(0, 255, 195, 0.6);
+}
+
 @media (max-width: 500px) {
   #description .text-box-absolute {
     position: relative;

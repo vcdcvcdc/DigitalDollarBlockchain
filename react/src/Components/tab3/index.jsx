@@ -19,7 +19,7 @@ function Tab3() {
           </svg>
           <Text as="p" style={{ color: "#ddd" }}>
 
-            <div className="row py-3">
+            <div className="row py-4 ">
               <div className="col-md-8 col-12">
                 <h3 className="pt-3">Fee-Free Economy</h3>
                 <p>
@@ -35,7 +35,8 @@ function Tab3() {
                 <img src={dd} alt="dd" className="img-fluid" />
               </div>
             </div>
-            <div className="row py-3">
+            <div className="border-bottom-neon w-50 m-auto"></div>
+            <div className="row py-4 ">
               <div className="col-md-4 col-12">
                 <img src={dd} alt="dd" className="img-fluid" />
               </div>
@@ -51,7 +52,8 @@ function Tab3() {
               </div>
 
             </div>
-            <div className="row py-3">
+            <div className="border-bottom-neon w-50 m-auto"></div>
+            <div className="row py-4 ">
               <div className="col-md-8 col-12">
                 <h3 className="pt-3">Building Trust</h3>
                 <p>
@@ -67,7 +69,8 @@ function Tab3() {
                 <img src={dd} alt="dd" className="img-fluid" />
               </div>
             </div>
-            <div className="row py-3">
+            <div className="border-bottom-neon w-50 m-auto"></div>
+            <div className="row py-4 ">
               <div className="col-md-4 col-12">
                 <img src={dd} alt="dd" className="img-fluid" />
               </div>
@@ -81,7 +84,8 @@ function Tab3() {
               </div>
 
             </div>
-            <div className="row py-3">
+            <div className="border-bottom-neon w-50 m-auto"></div>
+            <div className="row py-4 ">
               <div className="col-md-8 col-12">
                 <h3 className="pt-3">User Empowered</h3>
                 <p>
@@ -95,7 +99,8 @@ function Tab3() {
                 <img src={dd} alt="dd" className="img-fluid" />
               </div>
             </div>
-            <div className="row py-3">
+            <div className="border-bottom-neon w-50 m-auto"></div>
+            <div className="row py-4 ">
               <div className="col-md-4 col-12">
                 <img src={dd} alt="dd" className="img-fluid" />
               </div>
