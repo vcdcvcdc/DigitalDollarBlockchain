@@ -2,6 +2,8 @@ import React from "react";
 import { Animator } from "@arwes/react-animator";
 import { Text } from "@arwes/react-text";
 
+import dd from "../../images/icons/DD.svg"
+
 function Tab3() {
   return (
     <Animator>
@@ -17,8 +19,8 @@ function Tab3() {
           </svg>
           <Text as="p" style={{ color: "#ddd" }}>
 
-            <div className="row">
-              <div className="col-lg-4 col-md-6 col-12">
+            <div className="row py-3">
+              <div className="col-md-8 col-12">
                 <h3 className="pt-3">Fee-Free Economy</h3>
                 <p>
                   Introducing Karma, our native token that revolutionizes transaction
@@ -29,7 +31,15 @@ function Tab3() {
                   users who would otherwise face significant obstacles due to gas fees.
                 </p>
               </div>
-              <div className="col-lg-4 col-md-6 col-12">
+              <div className="col-md-4 col-12">
+                <img src={dd} alt="dd" className="img-fluid" />
+              </div>
+            </div>
+            <div className="row py-3">
+              <div className="col-md-4 col-12">
+                <img src={dd} alt="dd" className="img-fluid" />
+              </div>
+              <div className="col-md-8 col-12">
                 <h3 className="pt-3">Hassle-Free Digital Engagement</h3>
                 <p>
                   The Digital Dollar Blockchain is a user-centric platform that combines
@@ -40,7 +50,9 @@ function Tab3() {
                 </p>
               </div>
 
-              <div className="col-lg-4 col-md-6 col-12">
+            </div>
+            <div className="row py-3">
+              <div className="col-md-8 col-12">
                 <h3 className="pt-3">Building Trust</h3>
                 <p>
                   Moreover, DDBC's strict observance of regulatory compliance,
@@ -51,8 +63,15 @@ function Tab3() {
                   users.
                 </p>
               </div>
-
-              <div className="col-lg-4 col-md-6 col-12">
+              <div className="col-md-4 col-12">
+                <img src={dd} alt="dd" className="img-fluid" />
+              </div>
+            </div>
+            <div className="row py-3">
+              <div className="col-md-4 col-12">
+                <img src={dd} alt="dd" className="img-fluid" />
+              </div>
+              <div className="col-md-8 col-12">
                 <h3 className="pt-3">Fair Finance</h3>
                 <p>
                   As a non-profit, we prioritize secure, fair transactions, serving the common user.
@@ -60,7 +79,10 @@ function Tab3() {
                   wider user participation and enhancing platform flexibility.
                 </p>
               </div>
-              <div className="col-lg-4 col-md-6 col-12">
+
+            </div>
+            <div className="row py-3">
+              <div className="col-md-8 col-12">
                 <h3 className="pt-3">User Empowered</h3>
                 <p>
                   The Digital Dollar Blockchain (DDBC) is an open-market platform with unique benefits.
@@ -69,8 +91,15 @@ function Tab3() {
                   activities, preventing manipulation.
                 </p>
               </div>
-              <div className="col-lg-4 col-md-6 col-12">
-
+              <div className="col-md-4 col-12">
+                <img src={dd} alt="dd" className="img-fluid" />
+              </div>
+            </div>
+            <div className="row py-3">
+              <div className="col-md-4 col-12">
+                <img src={dd} alt="dd" className="img-fluid" />
+              </div>
+              <div className="col-md-8 col-12">
                 <h3 className="pt-3">Connecting Blockchains</h3>
                 <p>
                   Additionally, our interoperability connections across multiple
@@ -80,13 +109,7 @@ function Tab3() {
                 </p>
               </div>
 
-
             </div>
-
-
-
-
-
           </Text>
         </div>
       </div>
