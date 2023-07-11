@@ -31,7 +31,7 @@ const Step6 = () => {
 
       <input
         type="text"
-        placeholder="Enter your wallet address"
+        placeholder="Enter your Contract address"
         value={address}
         onChange={(e) => setAddress(e.target.value)}
       />
