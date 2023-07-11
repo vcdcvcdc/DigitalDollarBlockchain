@@ -15,7 +15,13 @@ function Tab1() {
               Digital Dollar Blockchain
             </text>
           </svg>
-          <Text as="p" style={{ color: "#ddd" }}>
+          <Text
+            manager="decipher"
+            easing="outSine"
+            fixed
+            as="p"
+            style={{ color: "#ddd" }}
+          >
             {/* <Typist avgTypingDelay={20} onTypingDone={handleTypingDone}> */}
             The Digital Dollar Blockchain Corporation (DDBC) is rewriting the
             narrative of financial technology, pioneering an integration with
