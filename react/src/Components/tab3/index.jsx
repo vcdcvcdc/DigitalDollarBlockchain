@@ -15,28 +15,38 @@ function Tab3() {
               of our Blockchain
             </text>
           </svg>
-          <Text as="p" style={{ color: "#ddd" }}>
+          <Text
+            manager="decipher"
+            easing="outSine"
+            fixed
+            as="p"
+            style={{ color: "#ddd" }}
+          >
             <h3 className="pt-3">User Empowered</h3>
             <p>
-              The Digital Dollar Blockchain (DDBC) is an open-market platform with unique benefits.
-              Unlike other platforms, DDBC doesn't have token ownership by proprietors. This ensures
-              that the value of each Digital Dollar token (DD) is determined by user decisions and
+              The Digital Dollar Blockchain (DDBC) is an open-market platform
+              with unique benefits. Unlike other platforms, DDBC doesn't have
+              token ownership by proprietors. This ensures that the value of
+              each Digital Dollar token (DD) is determined by user decisions and
               activities, preventing manipulation.
             </p>
             <h3 className="pt-3">Fair Finance</h3>
             <p>
-              As a non-profit, we prioritize secure, fair transactions, serving the common user.
-              We focus on democratizing financial services over chasing profits, encouraging
-              wider user participation and enhancing platform flexibility.
+              As a non-profit, we prioritize secure, fair transactions, serving
+              the common user. We focus on democratizing financial services over
+              chasing profits, encouraging wider user participation and
+              enhancing platform flexibility.
             </p>
             <h3 className="pt-3">Fee-Free Economy</h3>
             <p>
-              Introducing Karma, our native token that revolutionizes transaction
-              fees. With the innovative 'gas fee' management, users earn Karma points
-              instead of incurring costs for each transaction, effectively covering
-              the fees. This groundbreaking model eliminates transaction costs, enabling
-              free participation in economic activities. It especially benefits micro-transaction
-              users who would otherwise face significant obstacles due to gas fees.
+              Introducing Karma, our native token that revolutionizes
+              transaction fees. With the innovative 'gas fee' management, users
+              earn Karma points instead of incurring costs for each transaction,
+              effectively covering the fees. This groundbreaking model
+              eliminates transaction costs, enabling free participation in
+              economic activities. It especially benefits micro-transaction
+              users who would otherwise face significant obstacles due to gas
+              fees.
             </p>
             <h3 className="pt-3">Connecting Blockchains</h3>
             <p>
@@ -56,11 +66,12 @@ function Tab3() {
             </p>
             <h3 className="pt-3">Hassle-Free Digital Engagement</h3>
             <p>
-              The Digital Dollar Blockchain is a user-centric platform that combines
-              blockchain advantages. It offers an accessible, transparent marketplace,
-              attracting everyday users seeking hassle-free engagement with digital currencies.
-              Say goodbye to volatile values, high costs, and complexity as our platform addresses
-              these concerns effectively.
+              The Digital Dollar Blockchain is a user-centric platform that
+              combines blockchain advantages. It offers an accessible,
+              transparent marketplace, attracting everyday users seeking
+              hassle-free engagement with digital currencies. Say goodbye to
+              volatile values, high costs, and complexity as our platform
+              addresses these concerns effectively.
             </p>
           </Text>
         </div>
