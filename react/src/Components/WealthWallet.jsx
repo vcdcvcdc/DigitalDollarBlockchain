@@ -37,7 +37,7 @@ function WealthWalletSDK({ options }) {
   }, [wwDetails]);
   return (
     <>
-      {walletConnected ? (
+      {wwDetails ? (
         <>
           <>
             <span
@@ -46,6 +46,7 @@ function WealthWalletSDK({ options }) {
                 wealthWallet.openWallet({
                   chainId: process.env.REACT_APP_CHAIN_ID,
                   token: wwDetails?.linkToken,
+                  refreshToken: wwDetails?.refreshToken,
                 })
               }
             >
