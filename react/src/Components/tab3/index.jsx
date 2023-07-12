@@ -27,7 +27,7 @@ function Tab3() {
           <Text as="p" style={{ color: "#ddd" }}>
             <div className="row py-4 ">
               <div className="col-md-8 col-12 order-md-0 order-1">
-                <h5 className="pt-3 text-md-left">Fee-Free Economy</h5>
+                <h5 className="py-3 text-md-left">Fee-Free Economy</h5>
                 <p className="text-md-left">
                   Introducing Karma, our native token that revolutionizes
                   transaction fees. With the innovative 'gas fee' management,
@@ -49,7 +49,7 @@ function Tab3() {
                 <img src={digital} alt="Hassle-Free Digital Engagement" className="img-fluid" />
               </div>
               <div className="col-md-8 col-12">
-                <h5 className="pt-3 text-md-right">
+                <h5 className="py-3 text-md-right">
                   Hassle-Free Digital Engagement
                 </h5>
                 <p className="text-md-right">
@@ -65,7 +65,7 @@ function Tab3() {
 
             <div className="row py-4 ">
               <div className="col-md-8 col-12 order-md-0 order-1">
-                <h5 className="pt-3 text-md-left">Building Trust</h5>
+                <h5 className="py-3 text-md-left">Building Trust</h5>
                 <p className="text-md-left">
                   Moreover, DDBC's strict observance of regulatory compliance,
                   transparency, and meticulous approval processes means users
@@ -85,7 +85,7 @@ function Tab3() {
                 <img src={fair} alt="fair finance" className="img-fluid" />
               </div>
               <div className="col-md-8 col-12">
-                <h5 className="pt-3 text-md-right">Fair Finance</h5>
+                <h5 className="py-3 text-md-right">Fair Finance</h5>
                 <p className="text-md-right">
                   As a non-profit, we prioritize secure, fair transactions,
                   serving the common user. We focus on democratizing financial
@@ -97,7 +97,7 @@ function Tab3() {
 
             <div className="row py-4 ">
               <div className="col-md-8 col-12 order-md-0 order-1">
-                <h5 className="pt-3 text-md-left">User Empowered</h5>
+                <h5 className="py-3 text-md-left">User Empowered</h5>
                 <p className="text-md-left">
                   The Digital Dollar Blockchain (DDBC) is an open-market
                   platform with unique benefits. Unlike other platforms, DDBC
@@ -116,7 +116,7 @@ function Tab3() {
                 <img src={blockchains} alt="Connecting Blockchains" className="img-fluid" />
               </div>
               <div className="col-md-8 col-12">
-                <h5 className="pt-3 text-md-right">Connecting Blockchains</h5>
+                <h5 className="py-3 text-md-right">Connecting Blockchains</h5>
                 <p className="text-md-right">
                   Additionally, our interoperability connections across multiple
                   blockchains, providing users a seamless experience. This
