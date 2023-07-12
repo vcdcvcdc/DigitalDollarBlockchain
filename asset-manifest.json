@@ -1,19 +1,25 @@
 {
   "files": {
     "main.css": "/static/css/main.73102364.css",
-    "main.js": "/static/js/main.8fd6bfc1.js",
+    "main.js": "/static/js/main.380804cf.js",
     "static/media/Kamra.svg": "/static/media/Kamra.0fb8ae15a8fdf74dea135b3efddc04c2.svg",
+    "static/media/Trust.svg": "/static/media/Trust.a9d4f014f3ac718c3ecbd7e79a8d9852.svg",
+    "static/media/DigitalEngagement.svg": "/static/media/DigitalEngagement.b9bae8dbef00c6bb78490cee19ea0cec.svg",
     "static/media/experience.svg": "/static/media/experience.4e04dfa13c7822756a5fb4066dc1a094.svg",
+    "static/media/Empowered.svg": "/static/media/Empowered.bf9862cc82acc8eb48319ecbff19afd9.svg",
     "static/media/Rewards.svg": "/static/media/Rewards.cb38cdc9da4dedcc38a45beddadfc2d1.svg",
     "static/media/DD.svg": "/static/media/DD.3409432a79adf0709d2c9bcd0b357a15.svg",
+    "static/media/FreeFee.svg": "/static/media/FreeFee.677f0528d9f266eaaa8ade3da9e3a93b.svg",
+    "static/media/Blockchains.svg": "/static/media/Blockchains.4b086b50de35e5124022c3cb65497f43.svg",
+    "static/media/FairFinance.svg": "/static/media/FairFinance.b5c730f01e890d1358e4a9dd9a46e6d3.svg",
     "static/media/WW_icon_with_border.svg": "/static/media/WW_icon_with_border.df5c9c6afa78d86e8a6b7de8987956ea.svg",
     "static/media/WW_icon.svg": "/static/media/WW_icon.dea4e1227254564b8d901631b3b7e9b7.svg",
     "index.html": "/index.html",
     "main.73102364.css.map": "/static/css/main.73102364.css.map",
-    "main.8fd6bfc1.js.map": "/static/js/main.8fd6bfc1.js.map"
+    "main.380804cf.js.map": "/static/js/main.380804cf.js.map"
   },
   "entrypoints": [
     "static/css/main.73102364.css",
-    "static/js/main.8fd6bfc1.js"
+    "static/js/main.380804cf.js"
   ]
 }
