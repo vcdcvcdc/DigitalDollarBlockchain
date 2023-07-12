@@ -10,7 +10,6 @@ import digital from "../../images/icons/DigitalEngagement.svg";
 import blockchains from "../../images/icons/Blockchains.svg";
 import freeFee from "../../images/icons/FreeFee.svg";
 
-
 function Tab3() {
   return (
     <Animator>
@@ -40,13 +39,21 @@ function Tab3() {
                 </p>
               </div>
               <div className="col-md-4 col-12 order-md-1 order-0">
-                <img src={freeFee} alt="Fee Free" className="img-fluid" />
+                <img
+                  src={freeFee}
+                  alt="Fee Free"
+                  className="img-fluid floating-image"
+                />
               </div>
             </div>
 
             <div className="row py-4 ">
               <div className="col-md-4 col-12">
-                <img src={digital} alt="Hassle-Free Digital Engagement" className="img-fluid" />
+                <img
+                  src={digital}
+                  alt="Hassle-Free Digital Engagement"
+                  className="img-fluid floating-image"
+                />
               </div>
               <div className="col-md-8 col-12">
                 <h5 className="py-3 text-md-right">
@@ -76,13 +83,21 @@ function Tab3() {
                 </p>
               </div>
               <div className="col-md-4 col-12 order-md-1 order-0">
-                <img src={trust} alt="trust" className="img-fluid" />
+                <img
+                  src={trust}
+                  alt="trust"
+                  className="img-fluid floating-image"
+                />
               </div>
             </div>
 
             <div className="row py-4 ">
               <div className="col-md-4 col-12">
-                <img src={fair} alt="fair finance" className="img-fluid" />
+                <img
+                  src={fair}
+                  alt="fair finance"
+                  className="img-fluid floating-image"
+                />
               </div>
               <div className="col-md-8 col-12">
                 <h5 className="py-3 text-md-right">Fair Finance</h5>
@@ -107,13 +122,21 @@ function Tab3() {
                 </p>
               </div>
               <div className="col-md-4 col-12 order-md-1 order-0">
-                <img src={empowered} alt="User Empowered" className="img-fluid" />
+                <img
+                  src={empowered}
+                  alt="User Empowered"
+                  className="img-fluid floating-image"
+                />
               </div>
             </div>
 
             <div className="row py-4 ">
               <div className="col-md-4 col-12">
-                <img src={blockchains} alt="Connecting Blockchains" className="img-fluid" />
+                <img
+                  src={blockchains}
+                  alt="Connecting Blockchains"
+                  className="img-fluid floating-image"
+                />
               </div>
               <div className="col-md-8 col-12">
                 <h5 className="py-3 text-md-right">Connecting Blockchains</h5>
