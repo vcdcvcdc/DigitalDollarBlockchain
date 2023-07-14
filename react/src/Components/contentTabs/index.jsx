@@ -3,15 +3,20 @@ import React, { useState, useContext } from "react";
 //import the css file
 import "../contentTabs/dist/contentTabs.css";
 import SuccessContext from "../../contexts/successContext";
-
-import DescriptionSection from "../descriptionSection";
 import HeaderMenu from "../headerMenu";
 import Success from "../success";
+
+import Tab1 from "../tab1";
+import Tab2 from "../tab2";
+import Tab3 from "../tab3";
+import Tab4 from "../tab4";
+import Tab5 from "../tab5";
+import Tab6 from "../tab6";
 
 //create a new component called ContentTabs
 const ContentTabs = () => {
   const [activeTab, setActiveTab] = useState("tab1");
-  const { successPopup, setSuccessPopup } = useContext(SuccessContext);
+  const { successPopup } = useContext(SuccessContext);
 
   const playSound = () => {
     const audio = new Audio("https://next.arwes.dev/assets/sounds/click.mp3");
@@ -25,7 +30,6 @@ const ContentTabs = () => {
 
   return (
     <>
-      <div></div>
       <section id="header">
         <div className="wrap">
           <div className="ui-inner-border t"></div>
@@ -101,44 +105,25 @@ const ContentTabs = () => {
               <div id="description">
                 {successPopup && <Success />}
                 {successPopup && console.log("successPopup", successPopup)}
-                <DescriptionSection
-                  setActiveTab={setActiveTab}
-                  activeTab={activeTab}
-                />
+                {/* TRANSFORMING FINANCE  */}
+                {activeTab === "tab1" && <Tab1 />}
+                {/* MISSION/COMMITMENT  */}
+                {activeTab === "tab2" && <Tab2 />}
+                {/* INNOVATIVE FEATURES  */}
+                {activeTab === "tab3" && <Tab3 />}
+                {/* OUR TOKENS  */}
+                {activeTab === "tab4" && <Tab4 />}
+
+                {/* Testing DDBC  */}
+                {activeTab === "tab5" && <Tab5 />}
+                {/* Contracts */}
+                {activeTab === "tab6" && <Tab6 />}
               </div>
 
-              <div className="ui-fx">
-                <div className="ui-inner-border l"></div>
-                <div className="ui-inner-border r"></div>
-                {[1, 2, 3, 4].map(function (n) {
-                  return (
-                    <span
-                      className={"ui-corner"}
-                      key={n * Math.random()}
-                    ></span>
-                  );
-                })}
 
-                {["l", "r", "t", "b"].map(function (n) {
-                  return (
-                    <div className={"ui-batts " + n} key={n + Math.random()}>
-                      {[1, 2].map(function (n) {
-                        return (
-                          <span
-                            className={"batt"}
-                            key={n * Math.random()}
-                          ></span>
-                        );
-                      })}
-                    </div>
-                  );
-                })}
-              </div>
             </div>
           </div>
-          <div className="ui-inner-border b">
-            <HeaderMenu />
-          </div>
+          <div className="ui-inner-border b"></div>
 
           {/* HEADER TABS BOTTOM  */}
           <div className="header-tabs-bottom text-center">
