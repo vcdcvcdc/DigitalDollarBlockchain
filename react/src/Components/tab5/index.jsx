@@ -6,6 +6,7 @@ import Step2 from "../step2";
 import Step6 from "../step6";
 import CreateToken from "../createToken";
 import MintNft from "../mintNft";
+import WealthWalletSDK from "../WealthWallet";
 
 function Tab5() {
   const { wwDetails } = useContext(WWDetailsContext);
@@ -23,7 +24,10 @@ function Tab5() {
                 </svg>
                 <MintNft />
                 <CreateToken />
-                <Step6 />
+                {/* <Step6 /> */}
+              </div>
+              <div className="ww">
+                <WealthWalletSDK />
               </div>
             </div>
           </Animator>

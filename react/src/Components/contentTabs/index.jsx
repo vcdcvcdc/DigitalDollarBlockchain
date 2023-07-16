@@ -150,7 +150,7 @@ const ContentTabs = () => {
                     playSound();
                   }}
                 >
-                  DIGITAL DOLAR
+                  DDBC
                 </div>
               </div>
               <div className="col">
@@ -163,7 +163,7 @@ const ContentTabs = () => {
                     playSound();
                   }}
                 >
-                  CONTACT US
+                  CONTACT
                 </div>
               </div>
             </div>

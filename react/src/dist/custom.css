@@ -54,6 +54,12 @@
     transform: translate3d(0, 0, 0);
   }
 }
+.ww {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
 @media (max-width: 500px) {
   #description .text-box-absolute {
     position: relative;
@@ -72,5 +78,9 @@
 
   .ddbc-mint {
     max-width: 200px;
+  }
+
+  .ww img {
+    width: 40px;
   }
 }
