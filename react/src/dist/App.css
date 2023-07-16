@@ -89,36 +89,6 @@ h1 {
   justify-content: center;
 }
 
-#header button {
-  cursor: pointer;
-  margin: auto;
-  background: #0f0026;
-  border: 1px solid #00ffc3;
-  padding: 0;
-  width: 48px;
-  height: 48px;
-  outline: none;
-  transition: all 1s ease-in-out;
-  transform: scale(1);
-  color: #afe3d7;
-  border-radius: 100%;
-  position: absolute;
-  bottom: -24px;
-  left: -24px;
-  /* Button */
-  aspect-ratio: 1;
-  background-image: radial-gradient(closest-side, var(--backgroundColor) 44%, var(--rouletteColor) 45% 47%, transparent 48% 61%, var(--rouletteColor) 62% 64%, var(--backgroundColor) 65% 95%, var(--rouletteColor) 96% 97%, var(--backgroundColor) 100%), repeating-conic-gradient(red 0deg 7deg, var(--rouletteColor) 8deg 9deg, black 10deg 17deg, var(--rouletteColor) 18deg 19deg, red 20deg);
-  -webkit-animation: roulette 8s infinite linear;
-  animation: roulette 8s infinite linear;
-}
-
-#header button:hover {
-  width: 70px;
-  height: 70px;
-  bottom: -35px;
-  left: -35px;
-}
-
 /* 
 #header button .border {
   width: inherit;
@@ -860,18 +830,6 @@ section .col-narrow {
     transform: rotate(360deg);
   }
 }
-#header button::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 30%;
-  aspect-ratio: 1;
-  background-image: radial-gradient(var(--rouletteColor) 20%, transparent 21%), linear-gradient(transparent 45%, var(--rouletteColor) 46% 54%, transparent 55%), linear-gradient(90deg, transparent 45%, var(--rouletteColor) 46% 54%, transparent 55%);
-  -webkit-animation: rouletteCenter 1s infinite linear;
-  animation: rouletteCenter 1s infinite linear;
-}
-
 @-webkit-keyframes rouletteCenter {
   from {
     transform: translate(-50%, -50%) rotate(0deg);
@@ -888,24 +846,6 @@ section .col-narrow {
     transform: translate(-50%, -50%) rotate(-360deg);
   }
 }
-#header button::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 10%;
-  width: 10%;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  background-color: var(--rouletteColor);
-  transform-origin: 50% 450%;
-  -webkit-animation: rouletteBall 2s infinite linear;
-  animation: rouletteBall 2s infinite linear;
-}
-
-#header button:hover::after {
-  display: none;
-}
-
 @-webkit-keyframes rouletteBall {
   from {
     transform: translate(-50%, -50%) rotate(0deg) translateY(0%);

@@ -30,6 +30,22 @@
     transform-origin: center;
 }
 
+.button-submit {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #00ffc3;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button-submit:hover {
+    background-color: #00e6ad;
+}
+
 @keyframes floating {
     0% {
         transform: translate3d(0, 0, 0);
@@ -63,5 +79,9 @@
                 width: 90%;
             }
         }
+    }
+
+    .ddbc-mint {
+        max-width: 200px;
     }
 }

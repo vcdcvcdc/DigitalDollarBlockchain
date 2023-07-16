@@ -119,8 +119,6 @@ const ContentTabs = () => {
                 {/* Contracts */}
                 {activeTab === "tab6" && <Tab6 />}
               </div>
-
-
             </div>
           </div>
           <div className="ui-inner-border b"></div>
@@ -152,7 +150,7 @@ const ContentTabs = () => {
                     playSound();
                   }}
                 >
-                  DDBC
+                  DIGITAL DOLAR
                 </div>
               </div>
               <div className="col">
@@ -165,7 +163,7 @@ const ContentTabs = () => {
                     playSound();
                   }}
                 >
-                  CONTRACTS
+                  CONTACT US
                 </div>
               </div>
             </div>

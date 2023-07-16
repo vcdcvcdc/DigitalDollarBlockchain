@@ -26,7 +26,7 @@ const Step6 = () => {
       <h3 className="pt-3">Contract Whitelisting</h3>
       <p className=" m-auto py-3 px-5">
         Contract whitelisting process, made easy for testing purposes, Paste
-        your Contract address here and click submit:
+        your Deployed Contract address here and click submit:
       </p>
 
       <input
@@ -35,12 +35,8 @@ const Step6 = () => {
         value={address}
         onChange={(e) => setAddress(e.target.value)}
       />
-      <div
-        className="pointer py-3"
-        onClick={addContractKyc}
-        style={{ color: "#00ffc3" }}
-      >
-        Submit
+      <div className="py-3">
+        <button class="button-submit">Submit</button>
       </div>
     </div>
   );
