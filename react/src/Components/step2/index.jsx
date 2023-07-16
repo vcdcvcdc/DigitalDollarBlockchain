@@ -43,7 +43,7 @@ const Step2 = () => {
       .post(url)
       .then((response) => {
         console.log("Request successful");
-        getAllAccounts();
+        getAllAccounts(address);
         // Handle the response here
       })
       .catch((error) => {
@@ -52,7 +52,7 @@ const Step2 = () => {
       });
   }
 
-  function getAllAccounts() {
+  function getAllAccounts(userAddress) {
     const url = "https://backend.ddbc.dev/api/v1/account/get_all";
 
     axios
@@ -60,10 +60,7 @@ const Step2 = () => {
       .then((response) => {
         console.log("Request successful", response?.data?.data);
         // Handle the response here
-        const item = findItemWithAddress(
-          response?.data?.data,
-          wwDetails?.userAddress
-        );
+        const item = findItemWithAddress(response?.data?.data, userAddress);
         console.log(item, "item");
       })
       .catch((error) => {

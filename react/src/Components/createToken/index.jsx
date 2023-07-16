@@ -19,7 +19,12 @@ const CreateToken = () => {
               type="number"
               placeholder="Amount"
               value={amount}
-              onChange={(e) => setAmount(e.target.value)}
+              onChange={(e) => {
+                const inputAmount = e.target.value;
+                if (inputAmount >= 0) {
+                  setAmount(inputAmount);
+                }
+              }}
             />
           </div>
           <div className="col-md-6 col-12">
