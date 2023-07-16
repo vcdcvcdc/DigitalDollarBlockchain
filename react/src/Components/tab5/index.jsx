@@ -26,7 +26,7 @@ function Tab5() {
                 <CreateToken />
                 {/* <Step6 /> */}
               </div>
-              <div className="ww">
+              <div className="open-ww">
                 <WealthWalletSDK />
               </div>
             </div>
