@@ -1,7 +1,8 @@
 {
   "files": {
-    "main.css": "/static/css/main.441439be.css",
-    "main.js": "/static/js/main.8f164d92.js",
+    "main.css": "/static/css/main.6462b790.css",
+    "main.js": "/static/js/main.ab9f812f.js",
+    "static/media/logo.jpeg": "/static/media/logo.a50fb278efc60829f0bb.jpeg",
     "static/media/Kamra.svg": "/static/media/Kamra.0fb8ae15a8fdf74dea135b3efddc04c2.svg",
     "static/media/Trust.svg": "/static/media/Trust.a9d4f014f3ac718c3ecbd7e79a8d9852.svg",
     "static/media/DigitalEngagement.svg": "/static/media/DigitalEngagement.b9bae8dbef00c6bb78490cee19ea0cec.svg",
@@ -14,12 +15,14 @@
     "static/media/FairFinance.svg": "/static/media/FairFinance.b5c730f01e890d1358e4a9dd9a46e6d3.svg",
     "static/media/WW_icon_with_border.svg": "/static/media/WW_icon_with_border.df5c9c6afa78d86e8a6b7de8987956ea.svg",
     "static/media/WW_icon.svg": "/static/media/WW_icon.dea4e1227254564b8d901631b3b7e9b7.svg",
+    "static/media/twitter-icon.svg": "/static/media/twitter-icon.642b689210164cc0ef6d3f96c542ad5f.svg",
     "index.html": "/index.html",
-    "main.441439be.css.map": "/static/css/main.441439be.css.map",
-    "main.8f164d92.js.map": "/static/js/main.8f164d92.js.map"
+    "static/media/telegram-icon.svg": "/static/media/telegram-icon.2b16de2b67d59f2da6eee140df8e4a31.svg",
+    "main.6462b790.css.map": "/static/css/main.6462b790.css.map",
+    "main.ab9f812f.js.map": "/static/js/main.ab9f812f.js.map"
   },
   "entrypoints": [
-    "static/css/main.441439be.css",
-    "static/js/main.8f164d92.js"
+    "static/css/main.6462b790.css",
+    "static/js/main.ab9f812f.js"
   ]
 }
