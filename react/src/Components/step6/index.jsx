@@ -36,7 +36,7 @@ const Step6 = () => {
         onChange={(e) => setAddress(e.target.value)}
       />
       <div className="py-3">
-        <button class="button-submit">Submit</button>
+        <button className="button-submit">Submit</button>
       </div>
     </div>
   );

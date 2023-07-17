@@ -11,7 +11,7 @@ const MintNft = () => {
       </div>
 
       <div className="py-3">
-        <button class="button-submit">Mint</button>
+        <button className="button-submit">Mint</button>
       </div>
     </div>
   );

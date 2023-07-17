@@ -40,7 +40,7 @@ const CreateToken = () => {
       </div>
 
       <div className="py-3">
-        <button class="button-submit">Create</button>
+        <button className="button-submit">Create</button>
       </div>
     </div>
   );
