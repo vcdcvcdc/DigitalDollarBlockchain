@@ -49,19 +49,19 @@ const ContactUs = () => {
             </div>
           </form>
 
-          <div class="row justify-content-center pt-4 pb-5">
-            <div class="col-12 text-center d-flex justify-content-center">
+          <div className="row justify-content-center pt-4 pb-5">
+            <div className="col-12 text-center d-flex justify-content-center">
               <a
                 href="https://twitter.com/DigitalDollarAs"
                 target="_blank"
-                class="circle-socials pointer"
+                className="circle-socials pointer"
               >
                 <img src={twitter} alt="twitter" />
               </a>
               <a
                 href="https://t.me/digitaldollarblockchain"
                 target="_blank"
-                class="circle-socials pointer"
+                className="circle-socials pointer"
               >
                 <img
                   src={telegram}
