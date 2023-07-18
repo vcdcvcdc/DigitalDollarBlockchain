@@ -5,29 +5,38 @@ import "./dist/custom.css";
 import Player from "./Components/Player";
 import WWDetailsContext from "./contexts/wwDetailsContext";
 import SuccessContext from "./contexts/successContext";
+import WWInstanceContext from "./contexts/wwInstanceContext";
 
 const App = (props) => {
   const { toggleWakeLock } = useWakeLock();
   const [wwDetails, setWwDetails] = useState();
+  const [wwInstance, setWwInstance] = useState();
   const [successPopup, setSuccessPopup] = useState(false);
 
   return (
     <>
-      <WWDetailsContext.Provider
+      <WWInstanceContext.Provider
         value={{
-          wwDetails: wwDetails,
-          setWwDetails: setWwDetails,
+          wwInstance: wwInstance,
+          setWwInstance: setWwInstance,
         }}
       >
-        <SuccessContext.Provider
+        <WWDetailsContext.Provider
           value={{
-            successPopup: successPopup,
-            setSuccessPopup: setSuccessPopup,
+            wwDetails: wwDetails,
+            setWwDetails: setWwDetails,
           }}
         >
-          <Player toggleWakeLock={toggleWakeLock} />
-        </SuccessContext.Provider>
-      </WWDetailsContext.Provider>
+          <SuccessContext.Provider
+            value={{
+              successPopup: successPopup,
+              setSuccessPopup: setSuccessPopup,
+            }}
+          >
+            <Player toggleWakeLock={toggleWakeLock} />
+          </SuccessContext.Provider>
+        </WWDetailsContext.Provider>
+      </WWInstanceContext.Provider>
     </>
   );
 };

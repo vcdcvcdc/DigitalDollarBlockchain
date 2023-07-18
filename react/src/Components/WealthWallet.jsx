@@ -2,14 +2,15 @@ import React, { useContext } from "react";
 import { WealthWallet } from "wealth-wallet-sdk";
 import { useEffect, useState } from "react";
 import WWDetailsContext from "../contexts/wwDetailsContext";
-
+import WWInstanceContext from "../contexts/wwInstanceContext";
 import wwIcon from "../images/WW_icon.svg";
 import wwIconBorder from "../images/WW_icon_with_border.svg";
 
 function WealthWalletSDK({ options }) {
   const [walletConnected, setWalletConnected] = useState(false);
   const { wwDetails, setWwDetails } = useContext(WWDetailsContext);
-  //   const { setWwInstance } = useContext(WWInstanceContext);
+  const { setWwInstance } = useContext(WWInstanceContext);
+
   const [wealthWallet, setWealthWallet] = useState(null);
 
   useEffect(() => {
@@ -28,7 +29,7 @@ function WealthWalletSDK({ options }) {
         console.log({ linkToken, provider, userAddress });
       }
     );
-    // setWwInstance(tempWealthWallet);
+    setWwInstance(tempWealthWallet);
     setWealthWallet(tempWealthWallet);
   }, []);
 
