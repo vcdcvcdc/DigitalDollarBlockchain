@@ -1,11 +1,18 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import ddbc from "../../images/logo.jpeg";
 import { ClipLoader } from "react-spinners";
+import MintBtn from "../mintBtn";
+import WWDetailsContext from "../../contexts/wwDetailsContext";
+import contract from "../../data/contracts.json";
+import { create as ipfsHttpClient } from "ipfs-http-client";
 
 const MintNft = () => {
+  const wwDetails = useContext(WWDetailsContext);
   const [imageUrl, setImageUrl] = useState("");
   const [loading, setLoading] = useState(false);
   const [promptMessage, setPromptMessage] = useState("");
+  const [uploadIpfs, setUploadIpfs] = useState(false);
+  const [metadata, setMetadata] = useState("");
 
   function getImage() {
     console.log("getImage");
@@ -51,6 +58,7 @@ const MintNft = () => {
         ) {
           // Set the image URL in state
           setImageUrl(result.output[0]);
+          handleIpfsUpload(result.output[0]);
           setLoading(false);
         }
       })
@@ -60,18 +68,47 @@ const MintNft = () => {
       });
   }
 
+  const projectId = process.env.REACT_APP_INFURA_IPFS_PROJECT_ID;
+  const projectSecret = process.env.REACT_APP_INFURA_IPFS_PROJECT_SECRET;
+  const authorization = "Basic " + btoa(projectId + ":" + projectSecret);
+
+  const ipfs = ipfsHttpClient({
+    url: "https://ipfs.infura.io:5001/api/v0",
+    headers: {
+      authorization,
+    },
+  });
+
+  const handleIpfsUpload = async (image) => {
+    if (uploadIpfs) return;
+    else if (uploadIpfs === false) setUploadIpfs(true);
+
+    const metadata = await ipfs.add(
+      JSON.stringify({
+        name: "Digital Dollar NFT",
+        description: promptMessage,
+        image: image,
+      })
+    );
+    console.log(
+      "METADATA",
+      "https://cloudflare-ipfs.com/ipfs/" + metadata.path
+    );
+
+    setMetadata("https://cloudflare-ipfs.com/ipfs/" + metadata.path);
+
+    // you can upload again
+    setUploadIpfs(false);
+  };
+
+  console.log(contract.ddbc.nftFactory, "contract.ddbc.nftFactory");
+  console.log(metadata, "metadata");
+  console.log(wwDetails, "wwDetails");
   return (
     <div>
       <h3 className="pt-3">Mint Your First NFT on DDBC Using AI</h3>
 
       <div className="text-center pt-2">
-        <input
-          type="text"
-          placeholder="Enter a prompt to generate an image for you to mint as an NFT with
-          Wealth Wallet"
-          value={promptMessage}
-          onChange={(e) => setPromptMessage(e.target.value)}
-        />
         {loading ? (
           <>
             <div className="ddbc-mint py-5 m-auto">
@@ -83,12 +120,28 @@ const MintNft = () => {
         ) : (
           <img className="ddbc-mint" src={ddbc} alt="DDBC logo" />
         )}
+        <input
+          type="text"
+          placeholder="Enter a prompt to generate an image for you to mint as an NFT with
+          Wealth Wallet"
+          value={promptMessage}
+          onChange={(e) => setPromptMessage(e.target.value)}
+        />
       </div>
 
-      <div className="py-3">
-        <button onClick={getImage} className="button-submit">
-          Generate
-        </button>
+      <div className="py-3 d-flex justify-content-center">
+        <div className="px-3">
+          <button onClick={getImage} className="button-submit">
+            Generate
+          </button>
+        </div>
+        <div className="px-3">
+          <MintBtn
+            wwDetails={wwDetails}
+            contractAddress={contract.ddbc.nftFactory}
+            metadata={metadata}
+          />
+        </div>
       </div>
     </div>
   );
