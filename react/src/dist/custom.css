@@ -84,6 +84,19 @@
   transition: all 0.3s ease-in-out;
 }
 
+.ddbc-mint {
+  border-radius: 5px;
+  max-width: 350px;
+}
+
+.place-holder-image-mint {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
+  border: 1px solid #00ffc3;
+}
+
 @media (max-width: 500px) {
   #description .text-box-absolute {
     position: relative;
@@ -101,7 +114,7 @@
   }
 
   .ddbc-mint {
-    max-width: 200px;
+    max-width: 300px;
   }
 
   .open-ww img {
