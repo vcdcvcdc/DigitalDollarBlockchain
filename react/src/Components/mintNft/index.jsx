@@ -5,7 +5,7 @@ import { ClipLoader } from "react-spinners";
 const MintNft = () => {
   const [imageUrl, setImageUrl] = useState("");
   const [loading, setLoading] = useState(false);
-  const [promptMessage, setPromptMessage] = useState(""); //
+  const [promptMessage, setPromptMessage] = useState("");
 
   function getImage() {
     console.log("getImage");
