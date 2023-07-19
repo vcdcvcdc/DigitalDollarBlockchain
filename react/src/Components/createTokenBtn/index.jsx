@@ -17,7 +17,7 @@ const CreateTokenBtn = (props) => {
       "DDBC Test Token",
       symbol ? symbol : "",
       new BigNumber((supply * 10 ** 18).toString() ? (supply * 10 ** 18).toString() : (1000 * 10 ** 18).toString()),
-      wwDetails?.userAddress ? wwDetails?.userAddress : "",
+      wwDetails?.userAddress ? wwDetails?.userAddress : "0x71C7656EC7ab88b098defB751B7401B5f6d8976F",
     ]
   );
 
