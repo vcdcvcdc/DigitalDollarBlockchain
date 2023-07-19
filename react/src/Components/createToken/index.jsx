@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import CreateTokenBtn from "../createTokenBtn";
 
 const CreateToken = () => {
-  const [supply, setSupply] = useState(200);
+  const [supply, setSupply] = useState("200");
   const [symbol, setSymbol] = useState("DDBC");
 
   return (
@@ -24,7 +24,7 @@ const CreateToken = () => {
                 onChange={(e) => {
                   const inputAmount = e.target.value;
                   if (inputAmount >= 0) {
-                    setSupply(inputAmount);
+                    setSupply(inputAmount.toString());
                   }
                 }}
               />
