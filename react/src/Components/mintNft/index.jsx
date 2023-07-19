@@ -101,9 +101,6 @@ const MintNft = () => {
     setUploadIpfs(false);
   };
 
-  console.log(contract.ddbc.nftFactory, "contract.ddbc.nftFactory");
-  console.log(metadata, "metadata");
-  console.log(wwDetails, "wwDetails");
   return (
     <div>
       <h3 className="pt-3">Mint Your First NFT on DDBC Using AI</h3>
