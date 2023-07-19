@@ -2,8 +2,8 @@ import React, { useState } from "react";
 import CreateTokenBtn from "../createTokenBtn";
 
 const CreateToken = () => {
-  const [supply, setSupply] = useState("");
-  const [symbol, setSymbol] = useState("");
+  const [supply, setSupply] = useState(200);
+  const [symbol, setSymbol] = useState("DDBC");
 
   return (
     <>
