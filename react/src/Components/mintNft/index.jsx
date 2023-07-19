@@ -74,7 +74,7 @@ const MintNft = () => {
         />
         {loading ? (
           <>
-            <div className="ddbc-mint py-5">
+            <div className="ddbc-mint py-5 m-auto">
               <ClipLoader size={75} color="#00ffc3" />
             </div>
           </>
