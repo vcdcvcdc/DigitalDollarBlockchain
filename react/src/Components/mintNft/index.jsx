@@ -14,7 +14,7 @@ const MintNft = () => {
     myHeaders.append("Content-Type", "application/json");
 
     var raw = JSON.stringify({
-      key: "jFpkcRNAtWA4YYvsAR9tN1TkHKR0Q2vnNgGz6ONzuriyptNNdtW8RHxRZCHC",
+      key: "gefoSgufaEXppF3pOlYfJ0OVSop4mY9c0SqVnmeYhpBsclx8e9fPeCLm3P17",
       prompt: promptMessage,
       negative_prompt: null,
       width: "512",
