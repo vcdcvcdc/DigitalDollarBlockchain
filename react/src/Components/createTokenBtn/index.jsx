@@ -3,6 +3,8 @@ import contract from "../../data/contracts.json";
 import createTokenABI from "../../data/ABI/tokenFactory.json";
 import useWWTransaction from "../../hooks/useWWTransaction";
 import WWDetailsContext from "../../contexts/wwDetailsContext";
+import { BigNumber } from "bignumber.js";
+
 const CreateTokenBtn = (props) => {
   const { symbol, supply } = props;
   const { wwDetails } = useContext(WWDetailsContext);
@@ -14,7 +16,7 @@ const CreateTokenBtn = (props) => {
     [
       "DDBC Test Token",
       symbol ? symbol : "",
-      (supply * 10 ** 18).toString() ? (supply * 10 ** 18).toString() : 2,
+      new BigNumber((supply * 10 ** 18).toString() ? (supply * 10 ** 18).toString() : (1000 * 10 ** 18).toString()),
       wwDetails?.userAddress ? wwDetails?.userAddress : "",
     ]
   );
@@ -27,7 +29,7 @@ const CreateTokenBtn = (props) => {
           className="button-submit"
           onClick={async () => {
             console.log(
-              "transaaaaaaaaaactionnnnnnnnnnn",
+              "creating your token",
               writeWWTransaction?.()
             );
           }}
