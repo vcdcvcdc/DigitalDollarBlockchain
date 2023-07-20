@@ -12,6 +12,7 @@
     "@testing-library/user-event": "^14.4.3",
     "arwes": "^1.0.0-alpha.21",
     "axios": "^1.4.0",
+    "big-integer": "^1.6.51",
     "gh-pages": "^5.0.0",
     "gsap": "./gsap-bonus.tgz",
     "ipfs-http-client": "^60.0.1",

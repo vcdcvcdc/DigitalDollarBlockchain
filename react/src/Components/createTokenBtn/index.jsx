@@ -4,13 +4,14 @@ import createTokenABI from "../../data/ABI/tokenFactory.json";
 import useWWTransaction from "../../hooks/useWWTransaction";
 import WWDetailsContext from "../../contexts/wwDetailsContext";
 import { BigNumber } from "bignumber.js";
+import bigInt from "big-integer"; // Import the big-integer package
 
 const CreateTokenBtn = (props) => {
   const { symbol, supply } = props;
   const { wwDetails } = useContext(WWDetailsContext);
 
   // Convert supply to a BigInt value
-  const parsedSupply = supply ? BigInt(supply) : BigInt(1000);
+  const parsedSupply = supply ? bigInt(supply) : bigInt(1000);
 
   const { writeWWTransaction } = useWWTransaction(
     contract.ddbc.tokenFactory ? contract.ddbc.tokenFactory : "",
