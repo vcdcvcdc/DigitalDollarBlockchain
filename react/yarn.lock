@@ -11658,10 +11658,10 @@ wbuf@^1.1.0, wbuf@^1.7.3:
   dependencies:
     minimalistic-assert "^1.0.0"
 
-wealth-wallet-sdk@^0.1.5-dev.6:
-  version "0.1.5-dev.6"
-  resolved "https://registry.yarnpkg.com/wealth-wallet-sdk/-/wealth-wallet-sdk-0.1.5-dev.6.tgz#2debc1f9c36a8115253c556265699cd86cecd445"
-  integrity sha512-sIk7OM22j5UvXBEIwZotamSdULBnhFWf5tlDjYc83TYOYFPVHlwQ2NTmCazXb5jjzWKYLT/38Mdz5RFfUh7CkQ==
+wealth-wallet-sdk@^0.1.5-dev.10:
+  version "0.1.5-dev.10"
+  resolved "https://registry.yarnpkg.com/wealth-wallet-sdk/-/wealth-wallet-sdk-0.1.5-dev.10.tgz#842f39e965e7a71fab8fa1ca5d536ffb16925311"
+  integrity sha512-xH1Huj/V9YPyaYwSgMi0QT5GCar6+P6OkY4Gke2uBA8k3Tdc7Xb2suzXSlfca+eToWrBWWzVaCn6huW0+nzTmA==
   dependencies:
     "@types/web3" "^1.2.2"
     web3 "^1.8.2"
