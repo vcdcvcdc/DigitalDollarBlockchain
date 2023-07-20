@@ -9,8 +9,8 @@ const CreateTokenBtn = (props) => {
   const { symbol, supply } = props;
   const { wwDetails } = useContext(WWDetailsContext);
 
-  // Convert supply to a valid number before using it to create BigNumber
-  const parsedSupply = supply ? parseFloat(supply) : 1000;
+  // Convert supply to a BigInt value
+  const parsedSupply = supply ? BigInt(supply) : BigInt(1000);
 
   const { writeWWTransaction } = useWWTransaction(
     contract.ddbc.tokenFactory ? contract.ddbc.tokenFactory : "",
@@ -19,7 +19,7 @@ const CreateTokenBtn = (props) => {
     [
       "DDBC Test Token",
       symbol ? symbol : "",
-      new BigNumber((parsedSupply * 10 ** 18).toString()),
+      parsedSupply.toString(), // Use BigInt value as a string
       wwDetails?.userAddress
         ? wwDetails?.userAddress
         : "0x71C7656EC7ab88b098defB751B7401B5f6d8976F",
